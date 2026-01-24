@@ -11,7 +11,6 @@
     "name": "Sebastian Krzyżanowski",
     "email": "eskrzy@gmail.com"
   },
-  "license": "MIT",
   "dependencies": {
     "cheerio": "^1.1.2",
     "puppeteer": "^24.33.0"
