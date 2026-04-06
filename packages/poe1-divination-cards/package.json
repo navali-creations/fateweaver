@@ -1,6 +1,6 @@
 {
   "name": "@navali/poe1-divination-cards",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Path of Exile 1 divination card data and images, scraped from the PoE Wiki",
   "type": "module",
   "files": [
