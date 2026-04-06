@@ -1,0 +1,27 @@
+{
+  "branches": ["main"],
+  "tagFormat": "@navali/poe1-divination-cards@${version}",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/npm",
+      {
+        "pkgRoot": "packages/poe1-divination-cards"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["packages/poe1-divination-cards/package.json"],
+        "message": "chore(release): @navali/poe1-divination-cards@${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "releasedLabels": ["released"]
+      }
+    ]
+  ]
+}

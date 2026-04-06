@@ -1,14 +1,19 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 import * as cheerio from "cheerio";
 import puppeteer from "puppeteer";
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 const PAGE_URL = "https://www.poewiki.net/wiki/List_of_divination_cards";
-const OUT_ASSETS_DIR = path.resolve(
-  "../app/renderer/assets/poe1/divination-card-images",
+const PKG_DATA_DIR = path.resolve(
+  __dirname,
+  "packages/poe1-divination-cards/data",
 );
-const OUT_JSON_PATH = path.resolve("../app/renderer/assets/poe1/cards.json");
+const OUT_IMAGES_DIR = path.join(PKG_DATA_DIR, "images");
+const OUT_JSON_PATH = path.join(PKG_DATA_DIR, "cards.json");
 
 /** Make a filename-safe slug, but keep it readable */
 function slugify(name) {
@@ -50,15 +55,16 @@ function guessExtFromUrl(url) {
   try {
     const u = new URL(url);
     const ext = path.extname(u.pathname);
-    if (ext && ext.length <= 5) return ext; // .png, .jpg, .webm etc
+    if (ext && ext.length <= 5) return ext; // .png, .jpg, .webp etc.
   } catch {}
   return ".png";
 }
 
 async function main() {
-  console.error("Step 1: Creating assets directory...");
-  await fs.mkdir(OUT_ASSETS_DIR, { recursive: true });
-  console.error(`  ✓ Assets dir: ${OUT_ASSETS_DIR}`);
+  console.error("Step 1: Creating output directories...");
+  await fs.mkdir(OUT_IMAGES_DIR, { recursive: true });
+  console.error(`  ✓ Images dir: ${OUT_IMAGES_DIR}`);
+  console.error(`  ✓ JSON path:  ${OUT_JSON_PATH}`);
 
   console.error("\nStep 2: Launching headless browser...");
   const browser = await puppeteer.launch({
@@ -83,7 +89,7 @@ async function main() {
   console.error("\nStep 3: Fetching page from PoE Wiki...");
   try {
     await page.goto(PAGE_URL, {
-      waitUntil: "domcontentloaded", // Less strict than networkidle
+      waitUntil: "domcontentloaded",
       timeout: 30000,
     });
     console.error(`  ✓ Page loaded (DOM ready)`);
@@ -213,7 +219,6 @@ async function main() {
     if ($hover.length) {
       for (const span of $hover.children("span").toArray()) {
         const $span = $(span);
-        const _idx = processedSpans;
         processedSpans++;
 
         const $divi = $span.find('[class$="-divicard"]').first().length
@@ -224,7 +229,6 @@ async function main() {
           continue;
         }
 
-        // Let's look for the image in different places
         const $header = $span.find(".divicard-header").first();
         const name = $header.text().replace(/\s+/g, " ").trim();
         if (!name) {
@@ -238,15 +242,11 @@ async function main() {
 
         matchedCards++;
 
-        // Try to find the image anywhere in the span, not just in header
+        // Try to find the image anywhere in the span
         let imgSrc = $header.find("img").first().attr("src");
-
-        // If not in header, try anywhere in the divicard element
         if (!imgSrc) {
           imgSrc = $divi.find("img").first().attr("src");
         }
-
-        // If still not found, try anywhere in the span
         if (!imgSrc) {
           imgSrc = $span.find("img").first().attr("src");
         }
@@ -261,11 +261,10 @@ async function main() {
           foundImages++;
           const ext = guessExtFromUrl(imgUrl);
           const filename = `${slugify(name)}${ext}`;
-          const filePath = path.join(OUT_ASSETS_DIR, filename);
+          const filePath = path.join(OUT_IMAGES_DIR, filename);
 
           target.art_src = filename;
 
-          // Check if file already exists
           const exists = await fileExists(filePath);
           if (exists) {
             skippedExisting++;
@@ -310,7 +309,7 @@ async function main() {
       console.error(`  ⚠ No new images to download!`);
     }
 
-    console.error("\nStep 9: Writing JSON to file...");
+    console.error("\nStep 9: Writing JSON...");
     await fs.writeFile(OUT_JSON_PATH, JSON.stringify(cards, null, 2));
     console.error(`  ✓ Written to: ${OUT_JSON_PATH}`);
   } catch (error) {

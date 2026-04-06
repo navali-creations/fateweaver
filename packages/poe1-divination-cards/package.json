@@ -1,0 +1,32 @@
+{
+  "name": "@navali/poe1-divination-cards",
+  "version": "0.0.0-semantically-released",
+  "description": "Path of Exile 1 divination card data and images, scraped from the PoE Wiki",
+  "type": "module",
+  "files": [
+    "data"
+  ],
+  "exports": {
+    "./cards.json": "./data/cards.json"
+  },
+  "keywords": [
+    "poe",
+    "path-of-exile",
+    "divination-cards",
+    "poewiki",
+    "data"
+  ],
+  "author": {
+    "name": "Sebastian Krzyżanowski",
+    "email": "eskrzy@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/navali-creations/fateweaver.git",
+    "directory": "packages/poe1-divination-cards"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
