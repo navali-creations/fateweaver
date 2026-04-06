@@ -528,6 +528,14 @@
     "flavour_html": "Sometimes you need to make your own luck."
   },
   {
+    "name": "Desecrated Virtue",
+    "stack_size": 9,
+    "description": "Level 6 Awakened Support GemQuality: +23%Corrupted",
+    "reward_html": "<span class=\"tc -gem\">Level 6 Awakened Support Gem</span><br><span class=\"tc -default\">Quality:</span> <span class=\"tc -augmented\">+23%</span><br><span class=\"tc -corrupted\">[[Corrupted]]</span>",
+    "art_src": "Desecrated_Virtue.png",
+    "flavour_html": "Awoken virtuous slivers of the void,<br>defiled by the avaricious, <br>seized by the tyrannical."
+  },
+  {
     "name": "Desperate Crusade",
     "stack_size": 3,
     "description": "Prism Guardian",
@@ -754,8 +762,8 @@
   {
     "name": "Gemcutter's Mercy",
     "stack_size": 3,
-    "description": "Empower, Enhance, or Enlighten",
-    "reward_html": "<span class=\"tc -gem\">Empower, Enhance, or Enlighten</span>",
+    "description": "Exceptional Gem",
+    "reward_html": "<span class=\"tc -gem\">Exceptional Gem</span>",
     "art_src": "Gemcutters_Mercy.png",
     "flavour_html": "When you can only have one, which shall it be?<br>Red?<br>Blue?<br>Probably Green."
   },
@@ -850,8 +858,8 @@
   {
     "name": "Home",
     "stack_size": 3,
-    "description": "Empower, Enhance, or EnlightenQuality: +1-20%",
-    "reward_html": "<span class=\"tc -gem\">Empower, Enhance, or Enlighten</span><br><span class=\"tc -default\">Quality:</span> <span class=\"tc -augmented\">+1-20%</span>",
+    "description": "Exceptional GemQuality: +1-20%",
+    "reward_html": "<span class=\"tc -gem\">Exceptional Gem</span><br><span class=\"tc -default\">Quality:</span> <span class=\"tc -augmented\">+1-20%</span>",
     "art_src": "Home.png",
     "flavour_html": "There are countless people, countless stories, and countless eras, but there is one place that, for a time, each of us loved and was loved. It matters. We matter."
   },
@@ -1552,6 +1560,14 @@
     "flavour_html": "Some seek to change the world. Others change the world as a consequence of what they seek."
   },
   {
+    "name": "The Bargain",
+    "stack_size": 5,
+    "description": "Flawless Breachstone",
+    "reward_html": "<span class=\"tc -white\">Flawless Breachstone</span>",
+    "art_src": "The_Bargain.png",
+    "flavour_html": "In the pursuit of power, as in that of wealth, anything goes."
+  },
+  {
     "name": "The Battle Born",
     "stack_size": 5,
     "description": "Axe",
@@ -1688,6 +1704,14 @@
     "flavour_html": "From death, life. <br>From life, death. <br>The wheel turns, <br>and the corbies wheel overhead."
   },
   {
+    "name": "The Cartographer",
+    "stack_size": 1,
+    "description": "10x Cartographer's Chisel",
+    "reward_html": "<span class=\"tc -currency\">10x <span class=\"hoverbox c-item-hoverbox\"><span class=\"hoverbox__activator c-item-hoverbox__activator\">[[File: Cartographer's Chisel inventory icon.png|16x16px|link=|alt=]][[Cartographer's Chisel|Cartographer's Chisel]]</span><span class=\"hoverbox__display c-item-hoverbox__display\">[[File: Cartographer's Chisel inventory icon.png|78x78px|link=|alt=|class=item-icon]]</span></span></span>",
+    "art_src": "The_Cartographer.png",
+    "flavour_html": "My son, you lost your way before you arrived.<br>To never lose you again,<br>I make a path in my heart."
+  },
+  {
     "name": "The Cataclysm",
     "stack_size": 13,
     "description": "Level 21 Spell GemCorrupted",
@@ -1734,6 +1758,14 @@
     "reward_html": "<span class=\"tc -white\">Six-Link Body Armour</span>",
     "art_src": "The_Chains_that_Bind.png",
     "flavour_html": "Scarier than any criminal is an innocent man in chains, for when he breaks free, his revenge will be justified."
+  },
+  {
+    "name": "The Cheater",
+    "stack_size": 3,
+    "description": "Level 6 Awakened Support GemQuality: +20%Corrupted",
+    "reward_html": "<span class=\"tc -gem\">Level 6 Awakened Support Gem</span><br><span class=\"tc -default\">Quality:</span> <span class=\"tc -augmented\">+20%</span><br><span class=\"tc -corrupted\">[[Corrupted]]</span>",
+    "art_src": "The_Cheater.png",
+    "flavour_html": "Sometimes the best way to achieve greatness is to use a shortcut."
   },
   {
     "name": "The Chosen",
@@ -1936,6 +1968,14 @@
     "flavour_html": "Time dismantles all things eventually, but some wish to accelerate the process."
   },
   {
+    "name": "The Emptiness",
+    "stack_size": 6,
+    "description": "Vaal BreachQuality: +6%Corrupted",
+    "reward_html": "<span class=\"tc -gem\"><span class=\"hoverbox c-item-hoverbox\"><span class=\"hoverbox__activator c-item-hoverbox__activator\">[[File: Vaal Breach inventory icon.png|16x16px|link=|alt=]][[Vaal Breach|Vaal Breach]]</span><span class=\"hoverbox__display c-item-hoverbox__display\">[[File: Vaal Breach inventory icon.png|78x78px|link=|alt=|class=item-icon]]</span></span></span><br><span class=\"tc -default\">Quality:</span> <span class=\"tc -augmented\">+6%</span><br><span class=\"tc -corrupted\">[[Corrupted]]</span>",
+    "art_src": "The_Emptiness.png",
+    "flavour_html": "He appeared before the Light Eater, and at once knew his soul was damned."
+  },
+  {
     "name": "The Encroaching Darkness",
     "stack_size": 8,
     "description": "MapCorrupted",
@@ -2014,6 +2054,14 @@
     "reward_html": "<span class=\"tc -rare\">[[Map]]</span><br><span class=\"tc -corrupted\">[[Corrupted]]</span>",
     "art_src": "The_Explorer.png",
     "flavour_html": "A map is only useful if you know where you stand."
+  },
+  {
+    "name": "The Eye of Terror",
+    "stack_size": 8,
+    "description": "Chayula's Flawless Breachstone",
+    "reward_html": "<span class=\"tc -white\"><span class=\"hoverbox c-item-hoverbox\"><span class=\"hoverbox__activator c-item-hoverbox__activator\">[[File: Chayula's Flawless Breachstone inventory icon.png|16x16px|link=|alt=]][[Chayula's Flawless Breachstone|Chayula's Flawless Breachstone]]</span><span class=\"hoverbox__display c-item-hoverbox__display\">[[File: Chayula's Flawless Breachstone inventory icon.png|78x78px|link=|alt=|class=item-icon]]</span></span></span>",
+    "art_src": "The_Eye_of_Terror.png",
+    "flavour_html": "The Lord of Chaos dreams as his Eye gazes, unblinking, at his prize. And soon, all shall tremble before his waking form."
   },
   {
     "name": "The Eye of the Dragon",
@@ -2352,6 +2400,14 @@
     "flavour_html": "A good spy doesn't forget she's gone undercover."
   },
   {
+    "name": "The Journey",
+    "stack_size": 3,
+    "description": "Harbinger's Orb",
+    "reward_html": "<span class=\"tc -currency\"><span class=\"hoverbox c-item-hoverbox\"><span class=\"hoverbox__activator c-item-hoverbox__activator\">[[File: Harbinger's Orb inventory icon.png|16x16px|link=|alt=]][[Harbinger's Orb|Harbinger's Orb]]</span><span class=\"hoverbox__display c-item-hoverbox__display\">[[File: Harbinger's Orb inventory icon.png|78x78px|link=|alt=|class=item-icon]]</span></span></span>",
+    "art_src": "The_Journey.png",
+    "flavour_html": "Oh the places you will go, the sights you will see, the things you will meet."
+  },
+  {
     "name": "The King's Blade",
     "stack_size": 5,
     "description": "Bloodthirsty Eternal SwordItem Level: 66",
@@ -2374,6 +2430,14 @@
     "reward_html": "<span class=\"tc -currency\"><span class=\"hoverbox c-item-hoverbox\"><span class=\"hoverbox__activator c-item-hoverbox__activator\">[[File: Reflecting Mist inventory icon.png|16x16px|link=|alt=]][[Reflecting Mist|Reflecting Mist]]</span><span class=\"hoverbox__display c-item-hoverbox__display\">[[File: Reflecting Mist inventory icon.png|78x78px|link=|alt=|class=item-icon]]</span></span></span>",
     "art_src": "The_Lake.png",
     "flavour_html": "Gaze upon the Lake<br>Gaze upon your Reflection<br>Your full Potential"
+  },
+  {
+    "name": "The Landing",
+    "stack_size": 5,
+    "description": "The BeachheadMap Tier: 15Corrupted",
+    "reward_html": "<span class=\"tc -unique\"><span class=\"hoverbox c-item-hoverbox\"><span class=\"hoverbox__activator c-item-hoverbox__activator\">[[File: The Beachhead (High Tier) inventory icon.png|16x16px|link=|alt=]][[The Beachhead (High Tier)|The Beachhead]]</span><span class=\"hoverbox__display c-item-hoverbox__display\">[[File: The Beachhead (High Tier) inventory icon.png|78x78px|link=|alt=|class=item-icon]]</span></span></span><br><span class=\"tc -default\">Map Tier:</span> <span class=\"tc -normal\">15</span><br><span class=\"tc -corrupted\">[[Corrupted]]</span>",
+    "art_src": "The_Landing.png",
+    "flavour_html": "Warriors of a distant land, you embark on a journey from which you may not return, but which we will be all the better for."
   },
   {
     "name": "The Last Laugh",
@@ -2520,6 +2584,14 @@
     "flavour_html": "Loyalty can be bought. Just make sure you know who the buyer is."
   },
   {
+    "name": "The Messenger",
+    "stack_size": 4,
+    "description": "Harbinger Piece",
+    "reward_html": "<span class=\"tc -unique\">Harbinger Piece</span>",
+    "art_src": "The_Messenger.png",
+    "flavour_html": ""
+  },
+  {
     "name": "The Metalsmith's Gift",
     "stack_size": 6,
     "description": "Prismatic Ring",
@@ -2558,6 +2630,14 @@
     "reward_html": "<span class=\"tc -unique\"><span class=\"hoverbox c-item-hoverbox\"><span class=\"hoverbox__activator c-item-hoverbox__activator\">[[File: Death's Oath inventory icon.png|16x16px|link=|alt=]][[Death's Oath|Death's Oath]]</span><span class=\"hoverbox__display c-item-hoverbox__display\">[[File: Death's Oath inventory icon.png|78x78px|link=|alt=|class=item-icon]]</span></span></span>",
     "art_src": "The_Oath.png",
     "flavour_html": "An oath once made is an oath never broken. Do not delay in keeping it, for I take no pleasure in fools."
+  },
+  {
+    "name": "The Obscured",
+    "stack_size": 7,
+    "description": "Breachstone",
+    "reward_html": "<span class=\"tc -normal\">[[Breachstone]]</span>",
+    "art_src": "The_Obscured.png",
+    "flavour_html": "Our world, dangerous as it is, is far safer than what lies just beyond our sight."
   },
   {
     "name": "The Offering",
@@ -2726,6 +2806,14 @@
     "reward_html": "<span class=\"tc -unique\"><span class=\"hoverbox c-item-hoverbox\"><span class=\"hoverbox__activator c-item-hoverbox__activator\">[[File: Dying Sun inventory icon.png|16x16px|link=|alt=]][[Dying Sun|Dying Sun]]</span><span class=\"hoverbox__display c-item-hoverbox__display\">[[File: Dying Sun inventory icon.png|78x78px|link=|alt=|class=item-icon]]</span></span></span>",
     "art_src": "The_Progeny_of_Lunaris.png",
     "flavour_html": "Born beneath silver light, bearing Lunaris' mark.<br>Conjuring all his might, the Prodigy turned light to dark."
+  },
+  {
+    "name": "The Puzzle",
+    "stack_size": 5,
+    "description": "5x Breachstone Splinter",
+    "reward_html": "<span class=\"tc -currency\">5x Breachstone Splinter</span>",
+    "art_src": "The_Puzzle.png",
+    "flavour_html": "As countless fractures weaken the divide, nightmares seep through from the other side."
   },
   {
     "name": "The Queen",
@@ -2902,6 +2990,14 @@
     "reward_html": "<span class=\"tc -magic\">Quicksilver Flask of the Cheetah</span><br><span class=\"tc -default\">Item Level:</span> <span class=\"tc -normal\">100</span>",
     "art_src": "The_Shortcut.png",
     "flavour_html": "If time is the most valuable currency, how do you make more of it?"
+  },
+  {
+    "name": "The Side Quest",
+    "stack_size": 5,
+    "description": "20x Scouting Report",
+    "reward_html": "<span class=\"tc -currency\">20x Scouting Report</span>",
+    "art_src": "The_Side_Quest.png",
+    "flavour_html": "You'll never know the things you miss if you keep your eyes closed"
   },
   {
     "name": "The Sigil",
