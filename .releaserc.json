@@ -7,7 +7,8 @@
     [
       "@semantic-release/npm",
       {
-        "pkgRoot": "packages/poe1-divination-cards"
+        "pkgRoot": "packages/poe1-divination-cards",
+        "provenance": true
       }
     ],
     [
