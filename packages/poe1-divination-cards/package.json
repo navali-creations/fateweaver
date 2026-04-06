@@ -4,7 +4,8 @@
   "description": "Path of Exile 1 divination card data and images, scraped from the PoE Wiki",
   "type": "module",
   "files": [
-    "data"
+    "data",
+    "LICENSE.md"
   ],
   "exports": {
     "./data/*": "./data/*"
@@ -20,7 +21,7 @@
     "name": "Sebastian Krzyżanowski",
     "email": "eskrzy@gmail.com"
   },
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/navali-creations/fateweaver.git",

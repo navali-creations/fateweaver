@@ -347,13 +347,10 @@ async function main() {
       for (const row of rows) {
         if (category === "active") {
           row.is_disabled = false;
-          row.disabled_type = null;
         } else if (category === "drop-disabled") {
           row.is_disabled = true;
-          row.disabled_type = "drop";
         } else if (category === "reward-disabled") {
           row.is_disabled = true;
-          row.disabled_type = "reward";
 
           // The wiki shows "Disabled" as description — carry forward from previous league
           if (
@@ -391,12 +388,6 @@ async function main() {
     console.error(`  ✓ Total cards parsed: ${allCards.length}`);
     console.error(
       `    Active: ${allCards.filter((c) => !c.is_disabled).length}`,
-    );
-    console.error(
-      `    Drop-disabled: ${allCards.filter((c) => c.disabled_type === "drop").length}`,
-    );
-    console.error(
-      `    Reward-disabled: ${allCards.filter((c) => c.disabled_type === "reward").length}`,
     );
 
     // ------------------------------------------------------------------
