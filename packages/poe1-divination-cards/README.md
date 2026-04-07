@@ -141,7 +141,7 @@ function getCardImage(artSrc: string): string {
 ## Attribution
 
 - **Card data & artwork** — All divination card data, descriptions, flavour text, and artwork are the intellectual property of [Grinding Gear Games](https://www.grindinggear.com/). Sourced from the [PoE Wiki](https://www.poewiki.net).
-- **Drop weight data** — The `prohibited-library-weights.csv` file is community-sourced from the [Prohibited Library](https://discord.gg/prohibitedlibrary) Discord server, maintained by **@Nerdyjoe** and contributed by community members through empirical testing.
+- **Drop weight data** — The `prohibited-library-weights.csv` file is community-sourced from the [Prohibited Library](https://discord.gg/cf7Uah46ek) Discord server, maintained by **@Nerdyjoe** and contributed by community members through empirical testing.
 
 ## License
 
