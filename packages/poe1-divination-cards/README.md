@@ -138,6 +138,20 @@ function getCardImage(artSrc: string): string {
 }
 ```
 
+## Versioning
+
+This package follows the Path of Exile 1 game version for its major and minor version numbers:
+
+| Semver component | Meaning | Example |
+| ---------------- | ------- | ------- |
+| **Major.Minor** | PoE 1 league/game version | `3.28.x` = league version 3.28 (Mirage) |
+| **Patch** | Package fixes within that league | `3.28.1`, `3.28.2`, … |
+
+When a new league launches (e.g., 3.29), a `feat:` commit bumps the minor version to `3.29.0`.
+Bug fixes and data corrections within a league use `fix:` commits, which bump the patch version only.
+
+> **Note:** Version `3.28.0` exists only as a Git tag — the first version published to npm under this scheme is `3.28.1`.
+
 ## Attribution
 
 - **Card data & artwork** — All divination card data, descriptions, flavour text, and artwork are the intellectual property of [Grinding Gear Games](https://www.grindinggear.com/). Sourced from the [PoE Wiki](https://www.poewiki.net).
