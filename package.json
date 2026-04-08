@@ -6,7 +6,7 @@
   "description": "PoE Wiki divination card scraper",
   "type": "module",
   "scripts": {
-    "scrape:poe1": "node poe1-scrape-all-divination-cards.mjs"
+    "scrape:poe1": "node poe1-scrape-all-divination-cards.mjs && node poe1-generate-weights.mjs"
   },
   "keywords": [],
   "author": {
