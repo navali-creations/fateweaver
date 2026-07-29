@@ -1,20 +1,24 @@
 #!/usr/bin/env node
 /**
- * Reads `packages/poe1-divination-cards/data/prohibited-library-weights.csv`
- * and enriches the existing `cards-{league}.json` files and `cards.json`
- * with `weight` and `from_boss` fields.
+ * Enriches the current `cards-{league}.json` snapshot and `cards.json` with
+ * `weight` and `from_boss` fields. Historical snapshots remain untouched.
  *
- * - League-specific files use weights from their respective CSV column.
- * - `cards.json` uses weights from the latest (rightmost) active league.
- *
- * Cards that exist in the JSON but not in the CSV will get
- * `weight: null` and `from_boss: false`.
+ * - Weights prefer Wraeclast Cards' observed `community_estimated_weight`.
+ * - The checked-in Prohibited Library CSV is the offline weight fallback and
+ *   remains the source of `from_boss`.
+ * - `reference_weight` is deliberately ignored because Wraeclast Cards sources
+ *   that field from this package.
  *
  * Usage:
  *   node poe1-generate-weights.mjs
  */
 
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import {
+  readFileSync,
+  writeFileSync,
+  existsSync,
+  readdirSync,
+} from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -28,6 +32,10 @@ const PKG_DATA_DIR = join(
 );
 
 const CSV_PATH = join(PKG_DATA_DIR, "prohibited-library-weights.csv");
+const WRAECLAST_INDEX_URL =
+  "https://wraeclast.cards/data/drop-rates/index.json";
+const USER_AGENT =
+  "fateweaver/0.0.0 (https://github.com/navali-creations/fateweaver)";
 
 // ---------------------------------------------------------------------------
 // 1. Read & parse the CSV
@@ -120,7 +128,7 @@ if (leagueColumns.length === 0) {
 }
 
 console.log(
-  `Found ${leagueColumns.length} active league(s): ${leagueColumns.map((c) => c.name).join(", ")}`,
+  `Found ${leagueColumns.length} league weight column(s): ${leagueColumns.map((c) => c.name).join(", ")}`,
 );
 
 // ---------------------------------------------------------------------------
@@ -164,50 +172,204 @@ for (let r = 1; r < lines.length; r++) {
 }
 
 // ---------------------------------------------------------------------------
-// 4. Helper to enrich a cards JSON file with weights from a given league
+// 4. Wraeclast Cards community-weight source
 // ---------------------------------------------------------------------------
 
-function enrichCardsFile(filePath, leagueName) {
+async function fetchJson(url) {
+  const response = await fetch(url, {
+    headers: {
+      Accept: "application/json",
+      "User-Agent": USER_AGENT,
+    },
+    signal: AbortSignal.timeout(30000),
+  });
+  if (!response.ok) {
+    throw new Error(`${response.status} ${response.statusText}`);
+  }
+  return response.json();
+}
+
+async function loadCommunityWeights(leagueNames) {
+  const datasets = new Map();
+
+  try {
+    const index = await fetchJson(WRAECLAST_INDEX_URL);
+    const indexedLeagues = index.games?.poe1?.leagues;
+    if (!Array.isArray(indexedLeagues)) {
+      throw new Error("index does not contain games.poe1.leagues");
+    }
+
+    await Promise.all(
+      [...leagueNames].map(async (leagueName) => {
+        const league = indexedLeagues.find(
+          (candidate) =>
+            candidate.name?.toLowerCase() === leagueName.toLowerCase(),
+        );
+        if (!league?.url) return;
+
+        try {
+          const detailUrl = new URL(league.url, WRAECLAST_INDEX_URL);
+          if (detailUrl.origin !== new URL(WRAECLAST_INDEX_URL).origin) {
+            throw new Error(`refusing cross-origin detail URL ${detailUrl}`);
+          }
+
+          const data = await fetchJson(detailUrl);
+          if (!Array.isArray(data.cards)) {
+            throw new Error("league response does not contain a cards array");
+          }
+
+          const weights = new Map(
+            data.cards.map((card) => [
+              card.name,
+              Number.isFinite(card.community_estimated_weight)
+                ? card.community_estimated_weight
+                : null,
+            ]),
+          );
+          const estimateCount = [...weights.values()].filter(
+            Number.isFinite,
+          ).length;
+          datasets.set(leagueName, { weights });
+          console.log(
+            `  ✔ ${leagueName}: ${estimateCount} community estimates from ${Number(data.league?.observed_total ?? 0).toLocaleString("en-US")} observations`,
+          );
+        } catch (error) {
+          console.warn(
+            `  ⚠ Could not load Wraeclast Cards weights for "${leagueName}": ${error.message}`,
+          );
+        }
+      }),
+    );
+  } catch (error) {
+    console.warn(
+      `  ⚠ Could not load Wraeclast Cards index; using CSV weights (${error.message})`,
+    );
+  }
+
+  return datasets;
+}
+
+// ---------------------------------------------------------------------------
+// 5. Helpers to enrich card JSON
+// ---------------------------------------------------------------------------
+
+const latestWeightLeague = leagueColumns[leagueColumns.length - 1].name;
+const weightLeagueNames = new Set(leagueColumns.map((column) => column.name));
+const warnedFallbackLeagues = new Set();
+
+function resolveWeightLeague(snapshotLeague) {
+  if (weightLeagueNames.has(snapshotLeague)) return snapshotLeague;
+
+  if (!warnedFallbackLeagues.has(snapshotLeague)) {
+    warnedFallbackLeagues.add(snapshotLeague);
+    console.warn(
+      `  ⚠ No "${snapshotLeague}" CSV weight column; "${latestWeightLeague}" is available only as the offline/known-zero fallback`,
+    );
+  }
+  return latestWeightLeague;
+}
+
+function enrichCardsFile(filePath, snapshotLeague, communityData) {
   if (!existsSync(filePath)) {
     console.warn(`  ⚠ ${filePath} does not exist – skipping.`);
     return;
   }
 
-  const cards = JSON.parse(readFileSync(filePath, "utf-8"));
+  const existing = readFileSync(filePath, "utf-8");
+  const cards = JSON.parse(existing);
   let enriched = 0;
+  const csvLeague = communityData
+    ? weightLeagueNames.has(snapshotLeague)
+      ? snapshotLeague
+      : latestWeightLeague
+    : resolveWeightLeague(snapshotLeague);
 
   for (const card of cards) {
     const csvEntry = csvCards.get(card.name);
+    const csvWeight = csvEntry?.weights.get(csvLeague) ?? null;
+    let weight;
 
-    if (csvEntry) {
-      card.weight = csvEntry.weights.get(leagueName) ?? null;
-      card.from_boss = csvEntry.from_boss;
-      enriched++;
+    if (communityData) {
+      if (card.is_disabled) {
+        weight = 0;
+      } else if (communityData.weights.has(card.name)) {
+        weight = communityData.weights.get(card.name);
+      } else {
+        // Cards intentionally excluded from Stacked Decks are absent from the
+        // observed dataset. Preserve a known zero, but not a stale nonzero.
+        weight = csvWeight === 0 ? 0 : null;
+      }
     } else {
-      card.weight = null;
-      card.from_boss = false;
+      weight = csvWeight;
     }
+
+    card.weight = weight;
+    card.from_boss = csvEntry?.from_boss ?? false;
+    if (weight !== null) enriched++;
   }
 
-  writeFileSync(filePath, JSON.stringify(cards, null, 2) + "\n", "utf-8");
+  const output = JSON.stringify(cards, null, 2) + "\n";
+  if (existing.replace(/\r\n/g, "\n") !== output) {
+    writeFileSync(filePath, output, "utf-8");
+  }
   const filename = filePath.split(/[\\/]/).pop();
+  const source = communityData ? "Wraeclast Cards" : `CSV ${csvLeague}`;
   console.log(
-    `  ✔ ${filename}  (${enriched}/${cards.length} cards matched weights)`,
+    `  ✔ ${filename}  (${enriched}/${cards.length} cards have weights; ${source})`,
   );
 }
 
 // ---------------------------------------------------------------------------
-// 5. Enrich each cards-{league}.json
+// 6. Find the current snapshot before modifying any files
 // ---------------------------------------------------------------------------
-for (const col of leagueColumns) {
-  enrichCardsFile(join(PKG_DATA_DIR, `cards-${col.name}.json`), col.name);
-}
+const currentPath = join(PKG_DATA_DIR, "cards.json");
+const currentRaw = readFileSync(currentPath, "utf-8");
+const leagueSnapshots = readdirSync(PKG_DATA_DIR)
+  .map((filename) => {
+    const match = /^cards-(.+)\.json$/.exec(filename);
+    return match
+      ? {
+          name: match[1],
+          path: join(PKG_DATA_DIR, filename),
+        }
+      : null;
+  })
+  .filter(Boolean)
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+const currentSnapshot = leagueSnapshots.find(
+  (snapshot) => readFileSync(snapshot.path, "utf-8") === currentRaw,
+);
 
 // ---------------------------------------------------------------------------
-// 6. Enrich cards.json using the latest (rightmost) active league
+// 7. Load community weights for the current snapshot
 // ---------------------------------------------------------------------------
-const latestLeague = leagueColumns[leagueColumns.length - 1];
-console.log(`\nUsing latest league "${latestLeague.name}" for cards.json`);
-enrichCardsFile(join(PKG_DATA_DIR, "cards.json"), latestLeague.name);
+if (!currentSnapshot) {
+  throw new Error(
+    "Could not match cards.json to a league snapshot; refusing to update weights",
+  );
+}
+
+const currentLeague = currentSnapshot.name;
+console.log(`\nUsing current league "${currentLeague}" for weights`);
+
+console.log("\nLoading Wraeclast Cards community weights...");
+const communityWeights = await loadCommunityWeights(new Set([currentLeague]));
+const currentCommunityWeights = communityWeights.get(currentLeague);
+
+// ---------------------------------------------------------------------------
+// 8. Enrich only the current league snapshot and cards.json
+// ---------------------------------------------------------------------------
+enrichCardsFile(
+  currentSnapshot.path,
+  currentLeague,
+  currentCommunityWeights,
+);
+
+enrichCardsFile(
+  currentPath,
+  currentLeague,
+  currentCommunityWeights,
+);
 
 console.log("\nDone.");

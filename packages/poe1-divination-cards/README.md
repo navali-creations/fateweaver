@@ -16,6 +16,7 @@ pnpm add @navali/poe1-divination-cards
 @navali/poe1-divination-cards/
 └── data/
     ├── cards.json                          # current league snapshot
+    ├── cards-Allflame.json                 # Allflame league snapshot
     ├── cards-Mirage.json                   # Mirage league snapshot
     ├── cards-Keepers.json                  # Keepers league snapshot
     ├── prohibited-library-weights.csv      # community-sourced drop weights
@@ -39,8 +40,15 @@ Each entry in `cards.json` / `cards-<League>.json`:
 | `art_src`      | `string`  | `"The_Doctor.png"`      | Filename of the card art in `images/`       |
 | `flavour_html` | `string`  | `"<em>...</em>"`        | Flavour text with HTML formatting           |
 | `is_disabled`  | `boolean` | `false`                 | Whether the card is currently disabled      |
+| `weight`       | `number \| null` | `26`            | Estimated relative Stacked Deck weight      |
+| `from_boss`    | `boolean` | `false`                 | Whether the card is marked boss-restricted  |
 
 `cards.json` is always a copy of the latest league's data. League-specific files (`cards-Mirage.json`, etc.) are preserved as historical snapshots.
+
+Weights prefer the observed `community_estimated_weight` published by
+[Wraeclast Cards](https://wraeclast.cards/data/drop-rates/index.json). The
+checked-in Prohibited Library CSV is retained as an offline fallback and as the
+source of `from_boss` metadata.
 
 ## Usage
 
@@ -50,7 +58,7 @@ Each entry in `cards.json` / `cards-<League>.json`:
 import cards from "@navali/poe1-divination-cards/data/cards.json" assert { type: "json" };
 
 // Or a specific league snapshot
-import mirageCards from "@navali/poe1-divination-cards/data/cards-Mirage.json" assert { type: "json" };
+import allflameCards from "@navali/poe1-divination-cards/data/cards-Allflame.json" assert { type: "json" };
 ```
 
 ### Electron app — main process
@@ -144,7 +152,7 @@ This package follows the Path of Exile 1 game version for its major and minor ve
 
 | Semver component | Meaning | Example |
 | ---------------- | ------- | ------- |
-| **Major.Minor** | PoE 1 league/game version | `3.28.x` = league version 3.28 (Mirage) |
+| **Major.Minor** | PoE 1 league/game version | `3.29.x` = league version 3.29 (Allflame) |
 | **Patch** | Package fixes within that league | `3.28.1`, `3.28.2`, … |
 
 When a new league launches (e.g., 3.29), a `feat:` commit bumps the minor version to `3.29.0`.

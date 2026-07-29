@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=10.28.0"
+  },
   "description": "PoE Wiki divination card scraper",
   "type": "module",
   "scripts": {
-    "scrape:poe1": "node poe1-scrape-all-divination-cards.mjs && node poe1-generate-weights.mjs"
+    "scrape:poe1": "node --env-file-if-exists=.env poe1-scrape-all-divination-cards.mjs && node poe1-generate-weights.mjs"
   },
   "keywords": [],
   "author": {
@@ -14,8 +18,7 @@
     "email": "eskrzy@gmail.com"
   },
   "dependencies": {
-    "cheerio": "^1.1.2",
-    "puppeteer": "^24.33.0"
+    "cheerio": "^1.1.2"
   },
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^13.0.1",
