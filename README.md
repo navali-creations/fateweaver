@@ -17,17 +17,17 @@ The expected Node.js and pnpm versions are declared in `package.json`.
 pnpm install --frozen-lockfile
 ```
 
-Copy `.env.example` to `.env` and configure the Supabase league provider:
+Configure the Supabase league provider in `.env`:
 
 ```dotenv
 SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_PUBLISHABLE_KEY=your-publishable-key
-APP_VERSION_HEADER=fateweaver: 0.0.0
 ```
 
-The scraper stores the anonymous Supabase refresh token in the gitignored
-`.supabase-session.json` file. Later runs refresh and reuse that session instead
-of creating another anonymous user.
+The `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` names are also
+supported. `APP_VERSION_HEADER` is optional telemetry; omitting it does not
+prevent league detection. The scraper stores its anonymous Supabase session
+in the gitignored `.supabase-session.json` and reuses it on subsequent runs.
 
 ## Updating the current league
 
@@ -39,18 +39,22 @@ pnpm scrape:poe1
 
 The command:
 
-1. Detects the current PoE 1 league through the Supabase `v2-get-leagues`
-   function. The checked-in `leagues.json` is the offline fallback.
+1. Detects the current PoE 1 league through Supabase `v2-get-leagues`, using
+   `isCurrent` when supplied or the newest active non-Standard league by
+   `startAt`. Detection failures stop the update before writing card data;
+   stale local league lists are never used as a fallback.
 2. Fetches the rendered divination-card list through the PoE Wiki MediaWiki API.
 3. Parses active and disabled cards, reward descriptions, flavour text, and
    artwork.
-4. Writes a league snapshot such as `cards-Allflame.json` and updates
+4. Writes a league snapshot such as `cards-Covens.json` and updates
    `cards.json`.
 5. Loads `community_estimated_weight` from
    [Wraeclast Cards](https://wraeclast.cards/data/drop-rates/index.json) for the
    current league snapshot.
-6. Uses `prohibited-library-weights.csv` as the offline weight fallback and as
-   the source of `from_boss`.
+6. Uses the matching league column in `prohibited-library-weights.csv` as the
+   offline weight fallback and the CSV as the source of `from_boss`. If neither
+   source has weights for the selected league, active weights remain `null`.
+   Weights from an older league are never substituted.
 
 Wraeclast Cards references this package for card metadata and its
 `reference_weight`. Fateweaver deliberately ignores `reference_weight` and
@@ -58,16 +62,17 @@ only consumes the independently observed `community_estimated_weight`.
 
 ### Override league detection
 
-To force a league name, run the scraper and weight generator separately:
+To force a league name for both the scraper and weight generator:
 
 ```sh
-node --env-file-if-exists=.env poe1-scrape-all-divination-cards.mjs --league Allflame
-node poe1-generate-weights.mjs
+pnpm scrape:poe1 --league Covens
 ```
 
-The short form `-l Allflame` is also supported. Avoid forwarding the option to
-`pnpm scrape:poe1`: because that script chains two Node commands, forwarded
-arguments would be attached to the second command instead of the scraper.
+The short form `-l Covens` is also supported. The command resolves the league
+once and passes it to both steps, so identical card snapshots cannot cause the
+weight generator to select a historical league. The existing scraper runs the
+weight generator when called with `--weights`. Each script also accepts
+`--league <name>` when run separately.
 
 ## Generated data
 
@@ -76,6 +81,7 @@ Generated files live under `packages/poe1-divination-cards/data/`:
 ```text
 data/
 ├── cards.json
+├── cards-Covens.json
 ├── cards-Allflame.json
 ├── cards-Mirage.json
 ├── cards-Keepers.json
@@ -97,6 +103,7 @@ Before committing an update, run:
 
 ```sh
 pnpm install --frozen-lockfile
+pnpm test
 pnpm scrape:poe1
 node --check poe1-scrape-all-divination-cards.mjs
 node --check poe1-generate-weights.mjs

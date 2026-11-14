@@ -1,3 +1,4 @@
+import { spawnSync } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -13,10 +14,7 @@ const SUPABASE_LEAGUES_FUNCTION = "v2-get-leagues";
 const USER_AGENT =
   "fateweaver/0.0.0 (https://github.com/navali-creations/fateweaver)";
 const MAX_PROVIDER_RESPONSE_BYTES = 128 * 1024;
-const SUPABASE_SESSION_PATH = path.join(
-  __dirname,
-  ".supabase-session.json",
-);
+const SUPABASE_SESSION_PATH = path.join(__dirname, ".supabase-session.json");
 const PKG_DATA_DIR = path.resolve(
   __dirname,
   "packages/poe1-divination-cards/data",
@@ -24,63 +22,72 @@ const PKG_DATA_DIR = path.resolve(
 const OUT_IMAGES_DIR = path.join(PKG_DATA_DIR, "images");
 
 // ---------------------------------------------------------------------------
-// CLI args
+// Helpers
 // ---------------------------------------------------------------------------
 
-const { values: cliArgs } = parseArgs({
-  options: {
-    league: { type: "string", short: "l" },
-  },
-  strict: false,
-  allowPositionals: true,
-});
+function validateLeagueName(value) {
+  if (typeof value !== "string" || !value.trim()) {
+    throw new Error("League name must not be empty");
+  }
+  const name = value.trim();
+  if (/[<>:"/\\|?*\x00-\x1f]/.test(name) || /[. ]$/.test(name)) {
+    throw new Error("League name contains invalid filename characters");
+  }
+  return name;
+}
 
-/**
- * Resolve the league name:
- *  1. Explicit `-l <league>` flag
- *  2. Supabase v2-get-leagues
- *  3. Checked-in leagues.json
- *  4. Fall back to generic "cards.json" (no league suffix)
- */
-async function resolveLeague() {
-  if (cliArgs.league) return cliArgs.league;
+export function selectCurrentLeague(leagues, now = Date.now()) {
+  if (!Array.isArray(leagues)) {
+    throw new Error("Supabase returned an invalid league list");
+  }
+  const active = leagues.filter(
+    (league) => league?.game === "poe1" && league.isActive === true,
+  );
+  const hasCurrentFlags = active.some((league) => Object.hasOwn(league, "isCurrent"));
+  const candidates = hasCurrentFlags
+    ? active.filter((league) => league.isCurrent === true)
+    : active;
+  const eligible = candidates.filter((league) => {
+    if (
+      typeof league.leagueId !== "string" ||
+      typeof league.name !== "string" ||
+      league.leagueId.toLowerCase() === "standard" ||
+      league.name.toLowerCase() === "standard"
+    ) {
+      return false;
+    }
+    const start = Date.parse(league.startAt);
+    const end = league.endAt == null ? Infinity : Date.parse(league.endAt);
+    return Number.isFinite(start) && start <= now && end > now;
+  });
+  eligible.sort((a, b) => Date.parse(b.startAt) - Date.parse(a.startAt));
+  const current = hasCurrentFlags
+    ? eligible
+    : eligible.filter(
+        (league) => Date.parse(league.startAt) === Date.parse(eligible[0]?.startAt),
+      );
+  if (current.length !== 1) {
+    throw new Error(
+      `Supabase returned ${current.length} current PoE 1 leagues; expected exactly one`,
+    );
+  }
+  return validateLeagueName(current[0].name);
+}
 
+export async function resolveLeague(override) {
+  if (override !== undefined) return validateLeagueName(override);
   try {
     const league = await resolveLeagueFromSupabase();
     console.error(`  ✓ Auto-detected league from Supabase: ${league}`);
     return league;
   } catch (error) {
-    console.error(
-      `  ⚠ Supabase league lookup failed; falling back to leagues.json (${error.message})`,
+    throw new Error(
+      `Supabase league detection failed: ${error.message}. ` +
+        "Refusing to use a stale snapshot. Retry, or explicitly select --league <name>.",
+      { cause: error },
     );
   }
-
-  // Fall back to the checked-in league snapshot.
-  const leaguesPath = path.join(__dirname, "leagues.json");
-  try {
-    const raw = await fs.readFile(leaguesPath, "utf-8");
-    const leagues = JSON.parse(raw);
-    const active = leagues
-      .filter(
-        (l) => l.game === "poe1" && l.is_active && l.league_id !== "Standard",
-      )
-      .sort((a, b) => new Date(b.start_at) - new Date(a.start_at));
-    if (active.length > 0) {
-      console.error(
-        `  ✓ Auto-detected league from leagues.json: ${active[0].name}`,
-      );
-      return active[0].name;
-    }
-  } catch {
-    // leagues.json doesn't exist or is invalid — that's fine
-  }
-
-  return null;
 }
-
-// ---------------------------------------------------------------------------
-// Helpers
-// ---------------------------------------------------------------------------
 
 async function resolveLeagueFromSupabase() {
   const supabaseUrl = normalizeSupabaseUrl(
@@ -95,9 +102,6 @@ async function resolveLeagueFromSupabase() {
     throw new Error("Supabase publishable key is not configured");
   }
   const appVersionHeader = process.env.APP_VERSION_HEADER?.trim();
-  if (!appVersionHeader) {
-    throw new Error("APP_VERSION_HEADER is not configured");
-  }
 
   const accessToken = await getSupabaseAccessToken(
     supabaseUrl,
@@ -112,7 +116,7 @@ async function resolveLeagueFromSupabase() {
         Authorization: `Bearer ${accessToken}`,
         "Content-Type": "application/json",
         apikey: publishableKey,
-        "x-app-version": appVersionHeader,
+        ...(appVersionHeader ? { "x-app-version": appVersionHeader } : {}),
       },
       method: "POST",
       signal: AbortSignal.timeout(15000),
@@ -122,42 +126,7 @@ async function resolveLeagueFromSupabase() {
     leagueResponse,
     "Supabase league request failed",
   );
-  const activeLeagues = data.leagues.filter(
-    (league) => league.game === "poe1" && league.isActive,
-  );
-  if (activeLeagues.length === 0) {
-    throw new Error("Supabase returned no active PoE 1 leagues");
-  }
-
-  const hasCurrentFlags = activeLeagues.some((league) =>
-    Object.hasOwn(league, "isCurrent"),
-  );
-  if (hasCurrentFlags) {
-    const current = activeLeagues.filter(
-      (league) => league.isCurrent === true,
-    );
-    if (current.length !== 1) {
-      throw new Error(
-        `Supabase returned ${current.length} current PoE 1 leagues`,
-      );
-    }
-    return current[0].name.trim();
-  }
-
-  const nonStandard = activeLeagues.filter(
-    (league) =>
-      league.leagueId.toLowerCase() !== "standard" &&
-      league.name.toLowerCase() !== "standard",
-  );
-  const candidates = nonStandard.length > 0 ? nonStandard : activeLeagues;
-  return candidates
-    .reduce((current, league) =>
-      getTimestampSortValue(league.startAt) >
-      getTimestampSortValue(current.startAt)
-        ? league
-        : current,
-    )
-    .name.trim();
+  return selectCurrentLeague(data.leagues);
 }
 
 async function getSupabaseAccessToken(supabaseUrl, publishableKey) {
@@ -287,12 +256,6 @@ async function parseProviderJson(response, failureMessage) {
   } catch {
     throw new Error(`${failureMessage}: invalid JSON response`);
   }
-}
-
-function getTimestampSortValue(value) {
-  if (typeof value !== "string") return Number.NEGATIVE_INFINITY;
-  const timestamp = Date.parse(value);
-  return Number.isFinite(timestamp) ? timestamp : Number.NEGATIVE_INFINITY;
 }
 
 /** Make a filename-safe slug, but keep it readable */
@@ -465,23 +428,20 @@ function parseTableRows($, $table, { idxItem, idxStack, idxDesc }) {
 // Main
 // ---------------------------------------------------------------------------
 
-async function main() {
-  const league = await resolveLeague();
-  const leagueSuffix = league ? `-${league}` : "";
-  const outJsonPath = path.join(PKG_DATA_DIR, `cards${leagueSuffix}.json`);
+async function main(cliArgs) {
+  const league = await resolveLeague(cliArgs.league);
+  const outJsonPath = path.join(PKG_DATA_DIR, `cards-${league}.json`);
   const outCurrentPath = path.join(PKG_DATA_DIR, "cards.json");
 
   console.error("Step 1: Creating output directories...");
   await fs.mkdir(OUT_IMAGES_DIR, { recursive: true });
   console.error(`  ✓ Images dir: ${OUT_IMAGES_DIR}`);
   console.error(`  ✓ JSON path:  ${outJsonPath}`);
-  if (league) {
-    console.error(`  ✓ League:     ${league}`);
-  }
+  console.error(`  ✓ League:     ${league}`);
 
   // Load previous league data for carrying forward disabled card descriptions
   console.error("\nStep 1b: Loading previous league data...");
-  const currentLeagueFilename = league ? `cards-${league}.json` : null;
+  const currentLeagueFilename = `cards-${league}.json`;
   const previousCards = await loadPreviousLeagueCards(currentLeagueFilename);
   const previousByName = new Map(previousCards.map((c) => [c.name, c]));
 
@@ -759,9 +719,27 @@ async function main() {
   }
 
   console.error("\n✓ Done!");
+
+  if (cliArgs.weights) {
+    const result = spawnSync(
+      process.execPath,
+      [path.join(__dirname, "poe1-generate-weights.mjs"), "--league", league],
+      { stdio: "inherit" },
+    );
+    if (result.error) throw result.error;
+    if (result.status !== 0) process.exitCode = result.status ?? 1;
+  }
 }
 
-main().catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  const { values: cliArgs } = parseArgs({
+    options: {
+      league: { type: "string", short: "l" },
+      weights: { type: "boolean", default: false },
+    },
+  });
+  main(cliArgs).catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}

@@ -4,13 +4,13 @@
  * `weight` and `from_boss` fields. Historical snapshots remain untouched.
  *
  * - Weights prefer Wraeclast Cards' observed `community_estimated_weight`.
- * - The checked-in Prohibited Library CSV is the offline weight fallback and
+ * - The checked-in Prohibited Library CSV is the same-league offline fallback and
  *   remains the source of `from_boss`.
  * - `reference_weight` is deliberately ignored because Wraeclast Cards sources
  *   that field from this package.
  *
  * Usage:
- *   node poe1-generate-weights.mjs
+ *   node poe1-generate-weights.mjs [--league <name>]
  */
 
 import {
@@ -21,6 +21,11 @@ import {
 } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { parseArgs } from "node:util";
+
+const { values: cliArgs } = parseArgs({
+  options: { league: { type: "string", short: "l" } },
+});
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -205,7 +210,12 @@ async function loadCommunityWeights(leagueNames) {
           (candidate) =>
             candidate.name?.toLowerCase() === leagueName.toLowerCase(),
         );
-        if (!league?.url) return;
+        if (!league?.url) {
+          console.warn(
+            `  ⚠ No Wraeclast Cards weights for "${leagueName}"; checking same-league CSV weights`,
+          );
+          return;
+        }
 
         try {
           const detailUrl = new URL(league.url, WRAECLAST_INDEX_URL);
@@ -242,7 +252,7 @@ async function loadCommunityWeights(leagueNames) {
     );
   } catch (error) {
     console.warn(
-      `  ⚠ Could not load Wraeclast Cards index; using CSV weights (${error.message})`,
+      `  ⚠ Could not load Wraeclast Cards index; using same-league CSV weights (${error.message})`,
     );
   }
 
@@ -253,21 +263,7 @@ async function loadCommunityWeights(leagueNames) {
 // 5. Helpers to enrich card JSON
 // ---------------------------------------------------------------------------
 
-const latestWeightLeague = leagueColumns[leagueColumns.length - 1].name;
 const weightLeagueNames = new Set(leagueColumns.map((column) => column.name));
-const warnedFallbackLeagues = new Set();
-
-function resolveWeightLeague(snapshotLeague) {
-  if (weightLeagueNames.has(snapshotLeague)) return snapshotLeague;
-
-  if (!warnedFallbackLeagues.has(snapshotLeague)) {
-    warnedFallbackLeagues.add(snapshotLeague);
-    console.warn(
-      `  ⚠ No "${snapshotLeague}" CSV weight column; "${latestWeightLeague}" is available only as the offline/known-zero fallback`,
-    );
-  }
-  return latestWeightLeague;
-}
 
 function enrichCardsFile(filePath, snapshotLeague, communityData) {
   if (!existsSync(filePath)) {
@@ -278,21 +274,15 @@ function enrichCardsFile(filePath, snapshotLeague, communityData) {
   const existing = readFileSync(filePath, "utf-8");
   const cards = JSON.parse(existing);
   let enriched = 0;
-  const csvLeague = communityData
-    ? weightLeagueNames.has(snapshotLeague)
-      ? snapshotLeague
-      : latestWeightLeague
-    : resolveWeightLeague(snapshotLeague);
-
   for (const card of cards) {
     const csvEntry = csvCards.get(card.name);
-    const csvWeight = csvEntry?.weights.get(csvLeague) ?? null;
+    const csvWeight = csvEntry?.weights.get(snapshotLeague) ?? null;
     let weight;
 
-    if (communityData) {
-      if (card.is_disabled) {
-        weight = 0;
-      } else if (communityData.weights.has(card.name)) {
+    if (card.is_disabled) {
+      weight = 0;
+    } else if (communityData) {
+      if (communityData.weights.has(card.name)) {
         weight = communityData.weights.get(card.name);
       } else {
         // Cards intentionally excluded from Stacked Decks are absent from the
@@ -313,7 +303,11 @@ function enrichCardsFile(filePath, snapshotLeague, communityData) {
     writeFileSync(filePath, output, "utf-8");
   }
   const filename = filePath.split(/[\\/]/).pop();
-  const source = communityData ? "Wraeclast Cards" : `CSV ${csvLeague}`;
+  const source = communityData
+    ? "Wraeclast Cards"
+    : weightLeagueNames.has(snapshotLeague)
+      ? `CSV ${snapshotLeague}`
+      : "no current-league weights available; active weights left null";
   console.log(
     `  ✔ ${filename}  (${enriched}/${cards.length} cards have weights; ${source})`,
   );
@@ -337,19 +331,23 @@ const leagueSnapshots = readdirSync(PKG_DATA_DIR)
   .filter(Boolean)
   .sort((a, b) => a.name.localeCompare(b.name));
 
-const currentSnapshot = leagueSnapshots.find(
-  (snapshot) => readFileSync(snapshot.path, "utf-8") === currentRaw,
+const matchingSnapshots = leagueSnapshots.filter(
+  (snapshot) =>
+    (!cliArgs.league || snapshot.name === cliArgs.league.trim()) &&
+    readFileSync(snapshot.path, "utf-8") === currentRaw,
 );
 
 // ---------------------------------------------------------------------------
 // 7. Load community weights for the current snapshot
 // ---------------------------------------------------------------------------
-if (!currentSnapshot) {
+if (matchingSnapshots.length !== 1) {
   throw new Error(
-    "Could not match cards.json to a league snapshot; refusing to update weights",
+    "Could not uniquely match cards.json to a league snapshot; refusing to update weights. " +
+      "Use --league <name> to select the current snapshot explicitly.",
   );
 }
 
+const [currentSnapshot] = matchingSnapshots;
 const currentLeague = currentSnapshot.name;
 console.log(`\nUsing current league "${currentLeague}" for weights`);
 
