@@ -16,10 +16,10 @@ pnpm add @navali/poe1-divination-cards
 @navali/poe1-divination-cards/
 └── data/
     ├── cards.json                          # current league snapshot
+    ├── cards-Covens.json                   # Covens league snapshot
     ├── cards-Allflame.json                 # Allflame league snapshot
     ├── cards-Mirage.json                   # Mirage league snapshot
     ├── cards-Keepers.json                  # Keepers league snapshot
-    ├── prohibited-library-weights.csv      # community-sourced drop weights
     └── images/
         ├── The_Doctor.png
         ├── Rain_of_Chaos.png
@@ -45,10 +45,15 @@ Each entry in `cards.json` / `cards-<League>.json`:
 
 `cards.json` is always a copy of the latest league's data. League-specific files (`cards-Mirage.json`, etc.) are preserved as historical snapshots.
 
-Weights prefer the observed `community_estimated_weight` published by
-[Wraeclast Cards](https://wraeclast.cards/data/drop-rates/index.json). The
-checked-in Prohibited Library CSV is retained as an offline fallback and as the
-source of `from_boss` metadata.
+Weights are updated separately from wiki scraping using the observed
+`community_estimated_weight` published by
+[Wraeclast Cards](https://wraeclast.cards/data/drop-rates/index.json).
+`reference_weight` is ignored because it references this package. There is no
+CSV fallback. Scraping preserves existing same-league weights; new cards start
+with `null`. Weight refreshes set disabled cards to `0` and unknown estimates
+to `null`, preserving known zeros for cards absent from the observed dataset.
+`from_boss` flags are retained metadata and are not refreshed by the weight
+updater. New flags default to `false` when no existing metadata is available.
 
 ## Usage
 
@@ -163,7 +168,7 @@ Bug fixes and data corrections within a league use `fix:` commits, which bump th
 ## Attribution
 
 - **Card data & artwork** — All divination card data, descriptions, flavour text, and artwork are the intellectual property of [Grinding Gear Games](https://www.grindinggear.com/). Sourced from the [PoE Wiki](https://www.poewiki.net).
-- **Drop weight data** — The `prohibited-library-weights.csv` file is community-sourced from the [Prohibited Library](https://discord.gg/cf7Uah46ek) Discord server, maintained by **@Nerdyjoe** and contributed by community members through empirical testing.
+- **Drop weight data** — Current weight refreshes use community estimates from [Wraeclast Cards](https://wraeclast.cards/data/drop-rates/index.json). Historical weights and retained boss metadata include contributions from **@Nerdyjoe** and the [Prohibited Library](https://discord.gg/cf7Uah46ek) community through empirical testing.
 
 ## License
 
@@ -171,6 +176,6 @@ See [LICENSE.md](./LICENSE.md) for full details.
 
 - **Scraper code & tooling** — MIT
 - **Card data, descriptions & artwork** — Proprietary, © Grinding Gear Games
-- **Card weight data** — Community-sourced by @Nerdyjoe & the Prohibited Library community
+- **Card weight data** — Community-sourced via Wraeclast Cards, with historical contributions from @Nerdyjoe & the Prohibited Library community
 
 This package is not affiliated with, endorsed by, or associated with Grinding Gear Games.

@@ -1,4 +1,3 @@
-import { spawnSync } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -307,42 +306,25 @@ function guessExtFromUrl(url) {
 }
 
 /**
- * Try to find the most recent previous league file so we can carry forward
- * descriptions for disabled cards.
+ * Use the current snapshot to carry forward metadata when starting a new
+ * league. League filenames are not ordered chronologically.
  */
-async function loadPreviousLeagueCards(currentLeagueFilename) {
-  const files = await fs.readdir(PKG_DATA_DIR);
-  const leagueFiles = files
-    .filter(
-      (f) =>
-        /^cards-.+\.json$/.test(f) &&
-        f !== "cards.json" &&
-        f !== currentLeagueFilename,
-    )
-    .sort();
-
-  // Walk backwards through the sorted files, loading each until we find one
-  // with content. The "current" league file might already exist but be empty.
-  for (let i = leagueFiles.length - 1; i >= 0; i--) {
-    try {
-      const raw = await fs.readFile(
-        path.join(PKG_DATA_DIR, leagueFiles[i]),
-        "utf-8",
+async function loadPreviousLeagueCards() {
+  try {
+    const raw = await fs.readFile(path.join(PKG_DATA_DIR, "cards.json"), "utf-8");
+    const data = JSON.parse(raw);
+    if (Array.isArray(data) && data.length > 0) {
+      console.error(
+        `  ✓ Loaded existing card data from: cards.json (${data.length} cards)`,
       );
-      const data = JSON.parse(raw);
-      if (Array.isArray(data) && data.length > 0) {
-        console.error(
-          `  ✓ Loaded previous league data from: ${leagueFiles[i]} (${data.length} cards)`,
-        );
-        return data;
-      }
-    } catch {
-      // skip unreadable files
+      return data;
     }
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
   }
 
   console.error(
-    "  ⚠ No previous league data found — disabled card descriptions may be lost",
+    "  ⚠ No current snapshot found — disabled card descriptions may be lost",
   );
   return [];
 }
@@ -441,9 +423,21 @@ async function main(cliArgs) {
 
   // Load previous league data for carrying forward disabled card descriptions
   console.error("\nStep 1b: Loading previous league data...");
-  const currentLeagueFilename = `cards-${league}.json`;
-  const previousCards = await loadPreviousLeagueCards(currentLeagueFilename);
+  const previousCards = await loadPreviousLeagueCards();
   const previousByName = new Map(previousCards.map((c) => [c.name, c]));
+
+  // Weights belong to a league. Preserve only this snapshot's weights; never
+  // carry them forward from a previous league when creating a new snapshot.
+  let existingCards = [];
+  try {
+    existingCards = JSON.parse(await fs.readFile(outJsonPath, "utf-8"));
+    if (!Array.isArray(existingCards)) {
+      throw new Error(`Invalid card snapshot: ${outJsonPath}`);
+    }
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
+  }
+  const existingByName = new Map(existingCards.map((card) => [card.name, card]));
 
   console.error("\nStep 2: Fetching card data from PoE Wiki API...");
   const apiUrl = new URL(API_URL);
@@ -578,6 +572,11 @@ async function main(cliArgs) {
         }
       }
 
+      const existing = existingByName.get(row.name);
+      row.weight = existing?.weight ?? null;
+      row.from_boss =
+        existing?.from_boss ?? previousByName.get(row.name)?.from_boss ?? false;
+
       allCards.push(row);
       byName.set(row.name, row);
     }
@@ -706,7 +705,7 @@ async function main(cliArgs) {
   // ------------------------------------------------------------------
   console.error("\nStep 7: Writing JSON...");
 
-  const output = JSON.stringify(allCards, null, 2);
+  const output = JSON.stringify(allCards, null, 2) + "\n";
 
   // Write league-specific file
   await fs.writeFile(outJsonPath, output);
@@ -719,23 +718,12 @@ async function main(cliArgs) {
   }
 
   console.error("\n✓ Done!");
-
-  if (cliArgs.weights) {
-    const result = spawnSync(
-      process.execPath,
-      [path.join(__dirname, "poe1-generate-weights.mjs"), "--league", league],
-      { stdio: "inherit" },
-    );
-    if (result.error) throw result.error;
-    if (result.status !== 0) process.exitCode = result.status ?? 1;
-  }
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const { values: cliArgs } = parseArgs({
     options: {
       league: { type: "string", short: "l" },
-      weights: { type: "boolean", default: false },
     },
   });
   main(cliArgs).catch((error) => {

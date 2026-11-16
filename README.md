@@ -2,8 +2,9 @@
 
 Fateweaver maintains the data published as
 [`@navali/poe1-divination-cards`](https://www.npmjs.com/package/@navali/poe1-divination-cards).
-It collects Path of Exile 1 divination-card metadata and artwork from PoE Wiki,
-then enriches the card snapshots with community-estimated Stacked Deck weights.
+It collects Path of Exile 1 divination-card metadata and artwork from PoE Wiki.
+A separate command updates community-estimated Stacked Deck weights from
+Wraeclast Cards.
 
 This repository is primarily a maintainer tool. For instructions on consuming
 the published package, see the
@@ -31,7 +32,7 @@ in the gitignored `.supabase-session.json` and reuses it on subsequent runs.
 
 ## Updating the current league
 
-Run the complete update:
+Update card metadata and artwork:
 
 ```sh
 pnpm scrape:poe1
@@ -46,15 +47,34 @@ The command:
 2. Fetches the rendered divination-card list through the PoE Wiki MediaWiki API.
 3. Parses active and disabled cards, reward descriptions, flavour text, and
    artwork.
-4. Writes a league snapshot such as `cards-Covens.json` and updates
-   `cards.json`.
-5. Loads `community_estimated_weight` from
-   [Wraeclast Cards](https://wraeclast.cards/data/drop-rates/index.json) for the
-   current league snapshot.
-6. Uses the matching league column in `prohibited-library-weights.csv` as the
-   offline weight fallback and the CSV as the source of `from_boss`. If neither
-   source has weights for the selected league, active weights remain `null`.
-   Weights from an older league are never substituted.
+4. Preserves existing weights from the selected league's snapshot. New cards
+   and new league snapshots start with `null` weights, including disabled
+   cards, until the separate weight update runs. Older leagues' weights are
+   never carried forward. Existing `from_boss` flags are retained, with metadata
+   from the pre-scrape `cards.json` used for cards absent from the selected
+   snapshot; new flags default to `false`. New leagues also carry forward
+   disabled card descriptions from that current snapshot, without guessing a
+   predecessor from alphabetical league filenames.
+5. Writes a league snapshot such as `cards-Covens.json` and updates
+   `cards.json`. Scraping never requests or recalculates weights.
+
+### Update only weights
+
+```sh
+pnpm weights:poe1
+```
+
+This command updates only `weight` in the current league snapshot and
+`cards.json`, using `community_estimated_weight` from
+[Wraeclast Cards](https://wraeclast.cards/data/drop-rates/index.json). It does
+not scrape the wiki or need Supabase credentials. Other fields, including
+`from_boss`, and historical snapshots remain untouched.
+
+Disabled cards receive `0`; cards without an estimate receive `null`. An
+existing zero is preserved for cards absent from the observed dataset. If the
+source is unavailable, has no matching league, or returns invalid data, the
+command fails before writing either file and existing weights remain intact.
+There is no CSV fallback.
 
 Wraeclast Cards references this package for card metadata and its
 `reference_weight`. Fateweaver deliberately ignores `reference_weight` and
@@ -62,17 +82,22 @@ only consumes the independently observed `community_estimated_weight`.
 
 ### Override league detection
 
-To force a league name for both the scraper and weight generator:
+To force a league name when scraping:
 
 ```sh
 pnpm scrape:poe1 --league Covens
 ```
 
-The short form `-l Covens` is also supported. The command resolves the league
-once and passes it to both steps, so identical card snapshots cannot cause the
-weight generator to select a historical league. The existing scraper runs the
-weight generator when called with `--weights`. Each script also accepts
-`--league <name>` when run separately.
+The short form `-l Covens` is also supported by both commands. The weight
+updater identifies the current league by matching `cards.json` to exactly one
+league snapshot. If multiple snapshots are identical, select the current one:
+
+```sh
+pnpm weights:poe1 --league Covens
+```
+
+The selected snapshot must match `cards.json`; the override cannot update an
+unrelated historical snapshot. The scraper no longer accepts `--weights`.
 
 ## Generated data
 
@@ -85,15 +110,15 @@ data/
 ├── cards-Allflame.json
 ├── cards-Mirage.json
 ├── cards-Keepers.json
-├── prohibited-library-weights.csv
 └── images/
 ```
 
 - `cards.json` is identical to the current league snapshot.
 - `cards-<League>.json` files preserve league-specific data.
 - Existing images are reused; only missing artwork is downloaded.
-- Disabled cards receive weight `0`.
-- Cards without a current community estimate retain `null`.
+- Weight changes are made only by `pnpm weights:poe1`.
+- `from_boss` flags are retained metadata; neither command refreshes them
+  from an external source.
 
 Generated JSON and new artwork are intended to be committed.
 
@@ -105,6 +130,7 @@ Before committing an update, run:
 pnpm install --frozen-lockfile
 pnpm test
 pnpm scrape:poe1
+pnpm weights:poe1
 node --check poe1-scrape-all-divination-cards.mjs
 node --check poe1-generate-weights.mjs
 git diff --check
@@ -157,7 +183,8 @@ release and tag, and commits the updated package version as
 - Card metadata and artwork: [PoE Wiki](https://www.poewiki.net/)
 - Current league detection: Supabase `v2-get-leagues`
 - Observed drop weights: [Wraeclast Cards](https://wraeclast.cards/data/drop-rates/index.json)
-- Offline weights and boss metadata: Prohibited Library CSV
+- Historical weights and retained boss metadata: @Nerdyjoe and the Prohibited
+  Library community
 
 The scraper and tooling are MIT licensed. Path of Exile card data and artwork
 remain the intellectual property of Grinding Gear Games. See the

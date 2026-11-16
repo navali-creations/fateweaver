@@ -26,7 +26,7 @@ All divination card data, descriptions, flavour text, and card artwork contained
 
 ## Divination Card Weight Data — Community-Sourced
 
-The divination card weight data (`data/prohibited-library-weights.csv`) is community-sourced from the [Prohibited Library](https://discord.gg/prohibitedlibrary) Discord server. This data is maintained by **@Nerdyjoe** and contributed by members of the Prohibited Library community through empirical testing and data collection.
+Current divination card weight refreshes use community estimates published by [Wraeclast Cards](https://wraeclast.cards/data/drop-rates/index.json). Historical weights and retained boss metadata include data maintained by **@Nerdyjoe** and contributed by members of the [Prohibited Library](https://discord.gg/prohibitedlibrary) community through empirical testing and data collection.
 
 ## Summary
 
@@ -34,4 +34,4 @@ The divination card weight data (`data/prohibited-library-weights.csv`) is commu
 | --- | --- | --- |
 | Scraper code & tooling | Sebastian Krzyżanowski | MIT |
 | Card data, descriptions & artwork | Grinding Gear Games | Proprietary — All rights reserved |
-| Card weight data | @Nerdyjoe & Prohibited Library community | Community-sourced |
+| Card weight data | Wraeclast Cards contributors; historical contributions from @Nerdyjoe & Prohibited Library community | Community-sourced |

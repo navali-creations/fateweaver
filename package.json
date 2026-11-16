@@ -10,7 +10,8 @@
   "description": "PoE Wiki divination card scraper",
   "type": "module",
   "scripts": {
-    "scrape:poe1": "node --env-file-if-exists=.env poe1-scrape-all-divination-cards.mjs --weights",
+    "scrape:poe1": "node --env-file-if-exists=.env poe1-scrape-all-divination-cards.mjs",
+    "weights:poe1": "node poe1-generate-weights.mjs",
     "test": "node --test"
   },
   "keywords": [],
