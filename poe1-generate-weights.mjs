@@ -3,7 +3,8 @@
  * Updates only `weight` in the current league snapshot and `cards.json` using
  * Wraeclast Cards' observed `community_estimated_weight`. Historical snapshots
  * and all other card fields remain untouched. `reference_weight` is ignored
- * because Wraeclast Cards sources it from this package.
+ * because Wraeclast Cards sources it from this package. Numeric weights have
+ * a minimum of 1; unknown estimates remain null.
  *
  * Usage:
  *   pnpm weights:poe1 [--league <name>]
@@ -122,15 +123,18 @@ async function main(cliArgs) {
   let estimated = 0;
   for (const card of cards) {
     if (card.is_disabled) {
-      card.weight = 0;
+      card.weight = 1;
     } else if (weights.has(card.name)) {
       card.weight = weights.get(card.name);
     } else {
-      // Preserve a known exclusion, but clear stale nonzero weights for cards
-      // absent from the observed dataset. Missing estimates remain unknown.
-      card.weight = card.weight === 0 ? 0 : null;
+      // Retain minimum weights for absent cards, including legacy zeros.
+      // Other stale weights are cleared; missing estimates remain unknown.
+      card.weight = card.weight === 0 || card.weight === 1 ? 1 : null;
     }
-    if (card.weight !== null) estimated++;
+    if (card.weight !== null) {
+      card.weight = Math.max(1, card.weight);
+      estimated++;
+    }
   }
 
   const output = JSON.stringify(cards, null, 2) + "\n";

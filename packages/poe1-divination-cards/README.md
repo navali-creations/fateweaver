@@ -50,8 +50,10 @@ Weights are updated separately from wiki scraping using the observed
 [Wraeclast Cards](https://wraeclast.cards/data/drop-rates/index.json).
 `reference_weight` is ignored because it references this package. There is no
 CSV fallback. Scraping preserves existing same-league weights; new cards start
-with `null`. Weight refreshes set disabled cards to `0` and unknown estimates
-to `null`, preserving known zeros for cards absent from the observed dataset.
+with `null`. Weight refreshes clamp numeric weights to a minimum of `1`,
+including disabled cards, while unknown estimates remain `null`. For cards
+absent from the observed dataset, existing minimum weights are retained and
+legacy zeros are raised to `1`.
 `from_boss` flags are retained metadata and are not refreshed by the weight
 updater. New flags default to `false` when no existing metadata is available.
 

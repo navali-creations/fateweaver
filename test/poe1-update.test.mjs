@@ -234,7 +234,7 @@ test("standalone weight updates change only weights using community estimates wi
   assert.equal(result.status, 0, result.stderr + result.stdout);
   assert.match(result.stdout, /Using current league "Covens" for weights/);
   const actual = JSON.parse(await f.read("cards-Covens.json"));
-  assert.deepEqual(actual.map((card) => card.weight), [42, null, 0, 0]);
+  assert.deepEqual(actual.map((card) => card.weight), [42, null, 1, 1]);
   const withoutWeights = (data) => data.map(({ weight, ...card }) => card);
   assert.deepEqual(withoutWeights(actual), withoutWeights(JSON.parse(covensCards)));
   assert.equal(await f.read("cards.json"), await f.read("cards-Covens.json"));
@@ -246,14 +246,34 @@ test("standalone weight updates change only weights using community estimates wi
   assert.deepEqual(JSON.parse(await f.read("cards.json")), actual);
 });
 
-test("weight updates clear stale nonzero weights for cards absent from community data", async (t) => {
+test("weight updates clamp zero and fractional estimates to one while preserving unknowns", async (t) => {
+  const f = await fixture(t, {
+    payload: {
+      game: "poe1",
+      league: { name: "Covens" },
+      cards: [
+        { name: "Observed", community_estimated_weight: 0 },
+        { name: "Unobserved", community_estimated_weight: 0.25 },
+        { name: "Excluded", community_estimated_weight: null },
+        { name: "Disabled", community_estimated_weight: 0 },
+      ],
+    },
+  });
+  await f.setCurrent();
+  const result = f.weights();
+  assert.equal(result.status, 0, result.stderr + result.stdout);
+  assert.deepEqual(JSON.parse(await f.read("cards.json")).map((card) => card.weight), [1, 1, null, 1]);
+  assert.equal(await f.read("cards.json"), await f.read("cards-Covens.json"));
+});
+
+test("weight updates clear stale weights above the minimum for cards absent from community data", async (t) => {
   const f = await fixture(t);
   const current = JSON.parse(covensCards);
   current.find((card) => card.name === "Excluded").weight = 888;
   await f.setCurrent(JSON.stringify(current));
   const result = f.weights();
   assert.equal(result.status, 0, result.stderr + result.stdout);
-  assert.deepEqual(JSON.parse(await f.read("cards.json")).map((card) => card.weight), [42, null, null, 0]);
+  assert.deepEqual(JSON.parse(await f.read("cards.json")).map((card) => card.weight), [42, null, null, 1]);
 });
 
 test("league detection failure leaves every snapshot untouched despite stale leagues.json", async (t) => {

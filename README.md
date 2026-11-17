@@ -70,8 +70,9 @@ This command updates only `weight` in the current league snapshot and
 not scrape the wiki or need Supabase credentials. Other fields, including
 `from_boss`, and historical snapshots remain untouched.
 
-Disabled cards receive `0`; cards without an estimate receive `null`. An
-existing zero is preserved for cards absent from the observed dataset. If the
+Numeric weights have a minimum of `1`, including disabled cards. Cards without
+an estimate receive `null`. For cards absent from the observed dataset,
+existing minimum weights are retained and legacy zeros are raised to `1`. If the
 source is unavailable, has no matching league, or returns invalid data, the
 command fails before writing either file and existing weights remain intact.
 There is no CSV fallback.
