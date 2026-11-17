@@ -100,6 +100,35 @@ pnpm weights:poe1 --league Covens
 The selected snapshot must match `cards.json`; the override cannot update an
 unrelated historical snapshot. The scraper no longer accepts `--weights`.
 
+### Daily weight releases
+
+The `Release` GitHub Actions workflow refreshes weights every day at **05:00 UTC**
+(`0 5 * * *`) once these workflows are on `main`. It can also be started manually
+from the Actions tab. GitHub's scheduled runs can start later than their
+[scheduled time](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
+
+The workflow finds the current PoE 1 league marked `historical: false` in the
+Wraeclast Cards index, then runs `pnpm weights:poe1 --league <name>`. After a
+successful update, it commits the current snapshot and that league's snapshot
+with the UTC date:
+
+```text
+fix(data,poe1): 11/17/2026
+```
+
+After the dated commit is pushed, the same workflow publishes the next patch
+version.
+An empty commit is created when the weights are unchanged, so active leagues
+still receive a daily release. This uses the existing `GITHUB_TOKEN` and npm
+publishing setup; no extra token or Supabase credentials are needed. The release
+job runs in the same workflow because pushes using `GITHUB_TOKEN`
+[do not trigger another push workflow](https://docs.github.com/en/actions/concepts/security/github_token#when-github_token-triggers-workflow-runs).
+
+If there is no active league, the workflow skips the update and release.
+Source failures or ambiguous active leagues fail the run before creating a
+commit. A new league must first be scraped and committed so its snapshot matches
+`cards.json`; the daily workflow does not scrape card metadata.
+
 ## Generated data
 
 Generated files live under `packages/poe1-divination-cards/data/`:
