@@ -17,7 +17,7 @@ import { parseArgs } from "node:util";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PKG_DATA_DIR = join(__dirname, "packages", "poe1-divination-cards", "data");
-const WRAECLAST_INDEX_URL = "https://wraeclast.cards/data/drop-rates/index.json";
+const WRAECLAST_INDEX_URL = "https://wraeclast-cards.pages.dev/data/drop-rates/index.json";
 const USER_AGENT =
   "fateweaver/0.0.0 (https://github.com/navali-creations/fateweaver)";
 

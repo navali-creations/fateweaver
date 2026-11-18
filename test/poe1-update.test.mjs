@@ -91,11 +91,11 @@ globalThis.fetch = async (input, init = {}) => {
   if (url.hostname === "www.poewiki.net") {
     return Response.json({ parse: { text: await fs.readFile(new URL("./wiki.html", import.meta.url), "utf8") } });
   }
-  if (url.hostname === "wraeclast.cards" && url.pathname.endsWith("index.json")) {
+  if (url.hostname === "wraeclast-cards.pages.dev" && url.pathname.endsWith("index.json")) {
     if (scenario.indexDown) return new Response("", { status: 503 });
     return Response.json({ games: { poe1: { leagues: scenario.missingLeague ? [{ name: "Mirage", url: "/mirage.json" }] : [{ name: "Covens", url: scenario.detailUrl ?? "/covens.json" }] } } });
   }
-  if (url.href === "https://wraeclast.cards/covens.json") {
+  if (url.href === "https://wraeclast-cards.pages.dev/covens.json") {
     if (scenario.detailDown) return new Response("", { status: 503 });
     return Response.json(scenario.payload ?? { game: "poe1", league: { name: "Covens", observed_total: 100 }, cards: [
       { name: "Observed", community_estimated_weight: 42, reference_weight: 999 },
@@ -139,7 +139,7 @@ test("scraping selects Covens without requesting weights or carrying weights fro
   const actual = JSON.parse(raw);
   assert.deepEqual(actual.map((card) => card.weight), [null, null, null, null]);
   assert.equal(actual.at(-1).from_boss, true);
-  assert.ok((await f.network()).every((url) => !url.includes("wraeclast.cards")));
+  assert.ok((await f.network()).every((url) => !url.includes("wraeclast-cards.pages.dev")));
   const requests = (await fs.readFile(path.join(f.directory, "requests.jsonl"), "utf8")).trim().split("\n").map(JSON.parse);
   const [leagueRequest] = requests.filter((request) => request.path === "/functions/v1/v2-get-leagues");
   assert.equal(leagueRequest.game, "poe1");
@@ -215,7 +215,7 @@ test("scraping preserves same-league weights and boss flags while updating metad
   assert.deepEqual(actual.map((card) => card.from_boss), [true, false, false, false]);
   assert.ok(actual.every((card) => card.description === "Reward"));
   assert.equal(await f.read("cards.json"), await f.read("cards-Covens.json"));
-  assert.ok((await f.network()).every((url) => !url.includes("wraeclast.cards")));
+  assert.ok((await f.network()).every((url) => !url.includes("wraeclast-cards.pages.dev")));
 });
 
 test("newly scraped cards start with null weights even if an older league has a weight", async (t) => {
@@ -240,7 +240,7 @@ test("standalone weight updates change only weights using community estimates wi
   assert.equal(await f.read("cards.json"), await f.read("cards-Covens.json"));
   assert.equal(await f.read("cards-Mirage.json"), mirageCards);
   assert.equal(await f.read("cards-Allflame.json"), rawCards);
-  assert.ok((await f.network()).every((url) => new URL(url).hostname === "wraeclast.cards"));
+  assert.ok((await f.network()).every((url) => new URL(url).hostname === "wraeclast-cards.pages.dev"));
   const second = f.weights();
   assert.equal(second.status, 0, second.stderr + second.stdout);
   assert.deepEqual(JSON.parse(await f.read("cards.json")), actual);

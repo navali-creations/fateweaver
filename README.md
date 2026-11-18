@@ -66,7 +66,7 @@ pnpm weights:poe1
 
 This command updates only `weight` in the current league snapshot and
 `cards.json`, using `community_estimated_weight` from
-[Wraeclast Cards](https://wraeclast.cards/data/drop-rates/index.json). It does
+[Wraeclast Cards](https://wraeclast-cards.pages.dev/data/drop-rates/index.json). It does
 not scrape the wiki or need Supabase credentials. Other fields, including
 `from_boss`, and historical snapshots remain untouched.
 
@@ -120,6 +120,9 @@ fix(data,poe1): 11/17/2026
 
 After the dated commit is pushed, the same workflow publishes the next patch
 version.
+Both league detection and weight downloads use the publisher's public data host,
+`wraeclast-cards.pages.dev`, so CI does not depend on the custom domain's browser
+challenge settings.
 An empty commit is created when the weights are unchanged, so active leagues
 still receive a daily release. This uses the existing `GITHUB_TOKEN` and npm
 publishing setup; no extra token or Supabase credentials are needed. The release
@@ -214,7 +217,7 @@ release and tag, and commits the updated package version as
 
 - Card metadata and artwork: [PoE Wiki](https://www.poewiki.net/)
 - Current league detection: Supabase `v2-get-leagues`
-- Observed drop weights: [Wraeclast Cards](https://wraeclast.cards/data/drop-rates/index.json)
+- Observed drop weights: [Wraeclast Cards](https://wraeclast-cards.pages.dev/data/drop-rates/index.json)
 - Historical weights and retained boss metadata: @Nerdyjoe and the Prohibited
   Library community
 
