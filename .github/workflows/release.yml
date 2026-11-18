@@ -50,9 +50,22 @@ jobs:
           import { appendFileSync } from "node:fs";
 
           const response = await fetch("https://wraeclast.cards/data/drop-rates/index.json", {
+            headers: {
+              Accept: "application/json",
+              "User-Agent": "fateweaver/0.0.0 (https://github.com/navali-creations/fateweaver)",
+            },
             signal: AbortSignal.timeout(30000),
           });
-          if (!response.ok) throw new Error(`Wraeclast Cards index request failed: ${response.status}`);
+          if (!response.ok) {
+            console.error("Wraeclast Cards response:", JSON.stringify({
+              status: response.status,
+              server: response.headers.get("server"),
+              mitigation: response.headers.get("cf-mitigated"),
+              ray: response.headers.get("cf-ray"),
+              body: (await response.text()).slice(0, 500),
+            }));
+            throw new Error(`Wraeclast Cards index request failed: ${response.status}`);
+          }
           const index = await response.json();
           const leagues = index.games?.poe1?.leagues;
           if (!Array.isArray(leagues)) throw new Error("Wraeclast Cards index is missing PoE 1 leagues");
