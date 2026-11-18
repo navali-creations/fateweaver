@@ -7,9 +7,11 @@ on:
     paths:
       - "packages/poe1-divination-cards/**"
       - ".releaserc.json"
+      - ".github/workflows/release.yml"
   workflow_dispatch:
   schedule:
-    - cron: "0 5 * * *"
+    # Avoid the start-of-hour load, when GitHub can delay or drop scheduled runs.
+    - cron: "17 5 * * *"
 
 permissions:
   contents: write

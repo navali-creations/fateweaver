@@ -102,10 +102,12 @@ unrelated historical snapshot. The scraper no longer accepts `--weights`.
 
 ### Daily weight releases
 
-The `Release` GitHub Actions workflow refreshes weights every day at **05:00 UTC**
-(`0 5 * * *`) once these workflows are on `main`. It can also be started manually
-from the Actions tab. GitHub's scheduled runs can start later than their
-[scheduled time](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
+The `Release` GitHub Actions workflow refreshes weights every day at **05:17 UTC**
+(`17 5 * * *`) once these workflows are on `main`. It can also be started manually
+from the Actions tab. The schedule avoids the start-of-hour load, but GitHub's
+scheduled runs can still be delayed or dropped. If a daily run is missing, start
+the workflow manually. See GitHub's
+[schedule documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
 
 The workflow finds the current PoE 1 league marked `historical: false` in the
 Wraeclast Cards index, then runs `pnpm weights:poe1 --league <name>`. After a
