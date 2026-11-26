@@ -102,7 +102,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- "packages/poe1-divination-cards/data/cards.json" "packages/poe1-divination-cards/data/cards-${LEAGUE}.json"
-          git commit --allow-empty -m "fix(data,poe1): $(date -u +%m/%d/%Y)"
+          if git diff --cached --quiet; then
+            echo "Weights are unchanged; skipping commit and release."
+            echo "release=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "fix(data,poe1): $(date -u +%m/%d/%Y)"
           git push origin HEAD:main
           echo "release=true" >> "$GITHUB_OUTPUT"
 

@@ -110,9 +110,9 @@ the workflow manually. See GitHub's
 [schedule documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
 
 The workflow finds the current PoE 1 league marked `historical: false` in the
-Wraeclast Cards index, then runs `pnpm weights:poe1 --league <name>`. After a
-successful update, it commits the current snapshot and that league's snapshot
-with the UTC date:
+Wraeclast Cards index, then runs `pnpm weights:poe1 --league <name>`. If the
+generated data changes, it commits the current snapshot and that league's
+snapshot with the UTC date:
 
 ```text
 fix(data,poe1): 11/17/2026
@@ -123,9 +123,9 @@ version.
 Both league detection and weight downloads use the publisher's public data host,
 `wraeclast-cards.pages.dev`, so CI does not depend on the custom domain's browser
 challenge settings.
-An empty commit is created when the weights are unchanged, so active leagues
-still receive a daily release. This uses the existing `GITHUB_TOKEN` and npm
-publishing setup; no extra token or Supabase credentials are needed. The release
+If the weights are unchanged, the workflow skips the commit and release.
+This uses the existing `GITHUB_TOKEN` and npm publishing setup; no extra token
+or Supabase credentials are needed. The release
 job runs in the same workflow because pushes using `GITHUB_TOKEN`
 [do not trigger another push workflow](https://docs.github.com/en/actions/concepts/security/github_token#when-github_token-triggers-workflow-runs).
 
