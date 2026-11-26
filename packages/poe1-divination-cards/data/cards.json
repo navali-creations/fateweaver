@@ -7,7 +7,7 @@
     "art_src": "A_Chilling_Wind.png",
     "flavour_html": "All things slow under winter's <br>onslaught - even life itself.",
     "is_disabled": false,
-    "weight": 269,
+    "weight": 265,
     "from_boss": false
   },
   {
@@ -18,7 +18,7 @@
     "art_src": "A_Dab_of_Ink.png",
     "flavour_html": "The Poet's blood is the Empire's ink.",
     "is_disabled": false,
-    "weight": 489,
+    "weight": 477,
     "from_boss": false
   },
   {
@@ -29,7 +29,7 @@
     "art_src": "A_Dusty_Memory.png",
     "flavour_html": "In the oldest halls of my mind, at the end of a rarely used passage, lies my greatest treasure: one moment of happiness and innocence, pure and untouchable.",
     "is_disabled": false,
-    "weight": 202,
+    "weight": 201,
     "from_boss": false
   },
   {
@@ -51,7 +51,7 @@
     "art_src": "A_Fate_Worse_Than_Death.png",
     "flavour_html": "\"It was as though my very thoughts were breaking... fracturing into tiny motes to be lost on the wind.\"",
     "is_disabled": false,
-    "weight": 62,
+    "weight": 61,
     "from_boss": false
   },
   {
@@ -73,7 +73,7 @@
     "art_src": "A_Mothers_Parting_Gift.png",
     "flavour_html": "Nature was her domain,<br>Love was her song,<br>Family was her devotion,<br>Knowledge was her gift.",
     "is_disabled": false,
-    "weight": 989,
+    "weight": 984,
     "from_boss": false
   },
   {
@@ -84,7 +84,7 @@
     "art_src": "A_Note_in_the_Wind.png",
     "flavour_html": "The artist is long dead,<br>the lyrics are long forgotten,<br>yet the Song of War longs to be sung again",
     "is_disabled": false,
-    "weight": 221,
+    "weight": 215,
     "from_boss": false
   },
   {
@@ -95,7 +95,7 @@
     "art_src": "A_Sea_of_Blue.png",
     "flavour_html": "The harvest ended, the floods began.",
     "is_disabled": false,
-    "weight": 7840,
+    "weight": 7682,
     "from_boss": false
   },
   {
@@ -106,7 +106,7 @@
     "art_src": "A_Stone_Perfected.png",
     "flavour_html": "They gave the stone life. Over eons spent bathed in Corruption, that life evolved.",
     "is_disabled": false,
-    "weight": 119,
+    "weight": 118,
     "from_boss": false
   },
   {
@@ -117,7 +117,7 @@
     "art_src": "Abandoned_Wealth.png",
     "flavour_html": "When the world burned, the greedy burned with it, while the clever left as paupers.",
     "is_disabled": false,
-    "weight": 3332,
+    "weight": 3336,
     "from_boss": false
   },
   {
@@ -128,7 +128,7 @@
     "art_src": "Acclimatisation.png",
     "flavour_html": "The world is ever-changing.<br>Once-lush woods now lost beneath shifting sands,<br>Great cities now drown beneath turbulent waters.<br>Adapt or perish.",
     "is_disabled": false,
-    "weight": 3212,
+    "weight": 3193,
     "from_boss": false
   },
   {
@@ -139,7 +139,7 @@
     "art_src": "Akils_Prophecy.png",
     "flavour_html": "The hatungo know many answers to the same question, <br>for time itself is a tangled web.",
     "is_disabled": false,
-    "weight": 152,
+    "weight": 149,
     "from_boss": false
   },
   {
@@ -150,7 +150,7 @@
     "art_src": "Alivias_Grace.png",
     "flavour_html": "Her innocence and grace were enough to tame even the wildest of beasts.",
     "is_disabled": false,
-    "weight": 1885,
+    "weight": 1841,
     "from_boss": false
   },
   {
@@ -161,7 +161,7 @@
     "art_src": "Alluring_Bounty.png",
     "flavour_html": "A treasure worth killing for <br>is a treasure worth dying for.",
     "is_disabled": false,
-    "weight": 1478,
+    "weight": 1469,
     "from_boss": false
   },
   {
@@ -172,7 +172,7 @@
     "art_src": "Alone_in_the_Darkness.png",
     "flavour_html": "\"Sometimes, the most beautiful treasures...are the ones you cannot have.\" <br>- Beryl, Survivor from the Azurite Mines",
     "is_disabled": false,
-    "weight": 7225,
+    "weight": 7177,
     "from_boss": false
   },
   {
@@ -183,7 +183,7 @@
     "art_src": "Altered_Perception.png",
     "flavour_html": "You mustn't forget: you won't be leaving this place.",
     "is_disabled": false,
-    "weight": 32,
+    "weight": 34,
     "from_boss": false
   },
   {
@@ -227,7 +227,7 @@
     "art_src": "Arrogance_of_the_Vaal.png",
     "flavour_html": "Discovery can lead to beauty, or it can lead to ruin.",
     "is_disabled": false,
-    "weight": 549,
+    "weight": 554,
     "from_boss": false
   },
   {
@@ -238,7 +238,7 @@
     "art_src": "Assassins_Favour.png",
     "flavour_html": "By the time their eyes meet, <br>the dark deal has long since been made, <br>and his fate long since sealed.",
     "is_disabled": false,
-    "weight": 9835,
+    "weight": 9742,
     "from_boss": false
   },
   {
@@ -260,7 +260,7 @@
     "art_src": "Astral_Protection.png",
     "flavour_html": "For a time, we had something stronger than eldritch evil.<br>We had each other.",
     "is_disabled": false,
-    "weight": 622,
+    "weight": 612,
     "from_boss": false
   },
   {
@@ -271,7 +271,7 @@
     "art_src": "Atziris_Arsenal.png",
     "flavour_html": "In the prison of all sins, will you grasp godhood or sorrow? Only hope lies under the shadows.",
     "is_disabled": false,
-    "weight": 1116,
+    "weight": 1115,
     "from_boss": false
   },
   {
@@ -304,7 +304,7 @@
     "art_src": "Avian_Pursuit.png",
     "flavour_html": "Blazing through the night<br>Longing for infinite flight<br>Awaiting dawn's first light",
     "is_disabled": false,
-    "weight": 224,
+    "weight": 229,
     "from_boss": false
   },
   {
@@ -315,7 +315,7 @@
     "art_src": "Azure_Rage.png",
     "flavour_html": "The mask hides his identity<br>but also makes it hard to read...",
     "is_disabled": false,
-    "weight": 3099,
+    "weight": 3063,
     "from_boss": false
   },
   {
@@ -337,7 +337,7 @@
     "art_src": "Baited_Expectations.png",
     "flavour_html": "The line between having not enough to do and too much to do is unusually fine.",
     "is_disabled": false,
-    "weight": 364,
+    "weight": 360,
     "from_boss": false
   },
   {
@@ -359,7 +359,7 @@
     "art_src": "Bijoux.png",
     "flavour_html": "\"Such fine trinkets show their true value in times of crisis.\" - Tangmazu",
     "is_disabled": false,
-    "weight": 204,
+    "weight": 199,
     "from_boss": false
   },
   {
@@ -370,7 +370,7 @@
     "art_src": "Blind_Venture.png",
     "flavour_html": "\"It's risky not knowing where your wares come from. That's why I source my own.\"<br>- Klayver, the Antiquarian",
     "is_disabled": false,
-    "weight": 2125,
+    "weight": 2116,
     "from_boss": false
   },
   {
@@ -381,7 +381,7 @@
     "art_src": "Boon_of_Justice.png",
     "flavour_html": "Some gifts are obligations while others are simply opportunities.",
     "is_disabled": false,
-    "weight": 8105,
+    "weight": 8035,
     "from_boss": false
   },
   {
@@ -403,7 +403,7 @@
     "art_src": "Bound_by_Flame.png",
     "flavour_html": "In battle we burn together<br>or not at all.",
     "is_disabled": false,
-    "weight": 566,
+    "weight": 563,
     "from_boss": false
   },
   {
@@ -414,7 +414,7 @@
     "art_src": "Boundless_Realms.png",
     "flavour_html": "Boundless is the distance between where we start and where we start again.",
     "is_disabled": false,
-    "weight": 5307,
+    "weight": 5302,
     "from_boss": false
   },
   {
@@ -425,7 +425,7 @@
     "art_src": "Bowyers_Dream.png",
     "flavour_html": "If this is my dream, I don't wish to wake.",
     "is_disabled": false,
-    "weight": 121,
+    "weight": 119,
     "from_boss": false
   },
   {
@@ -436,7 +436,7 @@
     "art_src": "Broken_Truce.png",
     "flavour_html": "With a single act, years of peace have been shattered. An unknown assassin brings war upon us all.",
     "is_disabled": false,
-    "weight": 1514,
+    "weight": 1492,
     "from_boss": false
   },
   {
@@ -458,7 +458,7 @@
     "art_src": "Brothers_Stash.png",
     "flavour_html": "Even though he found the stash just in time,<br>He would trade it all away and then some to have him back.",
     "is_disabled": false,
-    "weight": 425,
+    "weight": 427,
     "from_boss": false
   },
   {
@@ -480,7 +480,7 @@
     "art_src": "Brush_Paint_and_Palette.png",
     "flavour_html": "\"Man may shape the world, but these? These shape the man.\" -Inquisitor Maligaro",
     "is_disabled": false,
-    "weight": 648,
+    "weight": 656,
     "from_boss": false
   },
   {
@@ -502,7 +502,7 @@
     "art_src": "Call_to_the_First_Ones.png",
     "flavour_html": "The Ezomyte, desperate for aid, cried out to the gods.",
     "is_disabled": false,
-    "weight": 1699,
+    "weight": 1708,
     "from_boss": false
   },
   {
@@ -513,7 +513,7 @@
     "art_src": "Cartographers_Delight.png",
     "flavour_html": "A map is similar<br>to a pair of eyes,<br>without one you stumble<br>around, unable to find your way.",
     "is_disabled": false,
-    "weight": 4562,
+    "weight": 4566,
     "from_boss": false
   },
   {
@@ -524,7 +524,7 @@
     "art_src": "Chaotic_Disposition.png",
     "flavour_html": "Life isn't what you make of it, it's already been made for you.",
     "is_disabled": false,
-    "weight": 3800,
+    "weight": 3743,
     "from_boss": false
   },
   {
@@ -546,7 +546,7 @@
     "art_src": "Checkmate.png",
     "flavour_html": "When victory is impossible, each of us plays only to delay the end.",
     "is_disabled": false,
-    "weight": 263,
+    "weight": 264,
     "from_boss": false
   },
   {
@@ -590,7 +590,7 @@
     "art_src": "Coveted_Possession.png",
     "flavour_html": "A taste of power brings a hunger for more.",
     "is_disabled": false,
-    "weight": 7206,
+    "weight": 7103,
     "from_boss": false
   },
   {
@@ -601,7 +601,7 @@
     "art_src": "Cursed_Words.png",
     "flavour_html": "If you look hard enough for hidden meaning, you will find it.",
     "is_disabled": false,
-    "weight": 3249,
+    "weight": 3236,
     "from_boss": false
   },
   {
@@ -623,7 +623,7 @@
     "art_src": "Dark_Dreams.png",
     "flavour_html": "No one ever truly understood what she meant when she said she wanted to raise a family.",
     "is_disabled": false,
-    "weight": 72,
+    "weight": 71,
     "from_boss": false
   },
   {
@@ -634,7 +634,7 @@
     "art_src": "Dark_Temptation.png",
     "flavour_html": "\"Only a fool looks to the occult for power and expects to be spared from its wrath.\" <br>- Voll, Emperor of Purity",
     "is_disabled": false,
-    "weight": 9808,
+    "weight": 9872,
     "from_boss": false
   },
   {
@@ -645,7 +645,7 @@
     "art_src": "Darker_Half.png",
     "flavour_html": "When you find what you're looking for, it's never quite right. When you have what you desire, yet you still want more.",
     "is_disabled": false,
-    "weight": 25,
+    "weight": 27,
     "from_boss": false
   },
   {
@@ -667,7 +667,7 @@
     "art_src": "Death.png",
     "flavour_html": "The end of the old,<br>the beginning of the new.<br>A unique opportunity for transformation,<br>for those with the power<br>to grasp it.",
     "is_disabled": false,
-    "weight": 1302,
+    "weight": 1282,
     "from_boss": false
   },
   {
@@ -700,7 +700,7 @@
     "art_src": "Demigods_Wager.png",
     "flavour_html": "Sometimes you need to make your own luck.",
     "is_disabled": false,
-    "weight": 1612,
+    "weight": 1620,
     "from_boss": false
   },
   {
@@ -722,7 +722,7 @@
     "art_src": "Desperate_Crusade.png",
     "flavour_html": "Through despondent hardships, those strong of spirit shall claim the prize.",
     "is_disabled": false,
-    "weight": 139,
+    "weight": 136,
     "from_boss": false
   },
   {
@@ -733,7 +733,7 @@
     "art_src": "Destined_to_Crumble.png",
     "flavour_html": "\"Let us not forget the most important lesson the Vaal taught us:<br>Nothing is eternal.\"<br>- Siosa Foaga, Imperial Scholar",
     "is_disabled": false,
-    "weight": 46004,
+    "weight": 45882,
     "from_boss": false
   },
   {
@@ -744,7 +744,7 @@
     "art_src": "Diallas_Subjugation.png",
     "flavour_html": "A symbol of beauty and innocence<br>The gems corrupted her mind<br>Malachai corrupted her gems<br>All but a glimmer of<br>greatness lost in madness",
     "is_disabled": false,
-    "weight": 1260,
+    "weight": 1271,
     "from_boss": false
   },
   {
@@ -755,7 +755,7 @@
     "art_src": "Disdain.png",
     "flavour_html": "No man sees all, but you'll see more than some see in a lifetime.",
     "is_disabled": false,
-    "weight": 324,
+    "weight": 312,
     "from_boss": false
   },
   {
@@ -766,7 +766,7 @@
     "art_src": "Divine_Beauty.png",
     "flavour_html": "In a land far away lived <br>a maiden most fair.<br>Her smile melted the coldest<br>of hearts, her song made<br>men and beast cry, <br>her beauty unparalleled;<br>Divine.",
     "is_disabled": false,
-    "weight": 366,
+    "weight": 377,
     "from_boss": false
   },
   {
@@ -788,7 +788,7 @@
     "art_src": "Divine_Shard.png",
     "flavour_html": "Sin sought to contain Divinity<br>so that no mortal would gain<br>such monstrous power ever again.",
     "is_disabled": false,
-    "weight": 1290,
+    "weight": 1295,
     "from_boss": false
   },
   {
@@ -799,7 +799,7 @@
     "art_src": "Doedres_Madness.png",
     "flavour_html": "\"Hold your tongue before I claim it.\" - Doedre Darktongue",
     "is_disabled": false,
-    "weight": 12594,
+    "weight": 12546,
     "from_boss": false
   },
   {
@@ -810,7 +810,7 @@
     "art_src": "Doryanis_Epiphany.png",
     "flavour_html": "\"Virtue gems have facets beyond those that can be seen by the mortal eye. Let us look deeper...\"",
     "is_disabled": false,
-    "weight": 97,
+    "weight": 100,
     "from_boss": false
   },
   {
@@ -843,7 +843,7 @@
     "art_src": "Dying_Anguish.png",
     "flavour_html": "Moribund, he gazed upon the journey taken as blood trickled down his chin. His eye closed on the city ahead that he would never call home.",
     "is_disabled": false,
-    "weight": 2255,
+    "weight": 2244,
     "from_boss": false
   },
   {
@@ -865,7 +865,7 @@
     "art_src": "Earth_Drinker.png",
     "flavour_html": "Taste and grow strong. Drink too much and be buried.",
     "is_disabled": false,
-    "weight": 1448,
+    "weight": 1456,
     "from_boss": false
   },
   {
@@ -876,7 +876,7 @@
     "art_src": "Echoes_of_Love.png",
     "flavour_html": "\"I gave up my body for you. I gave up my name for you. And one day I shall give up my life for you.\"",
     "is_disabled": false,
-    "weight": 418,
+    "weight": 427,
     "from_boss": false
   },
   {
@@ -898,7 +898,7 @@
     "art_src": "Emperor_of_Purity.png",
     "flavour_html": "True to his title,<br>Voll, newly crowned,<br>had many of the<br>Eternal Empire's signature<br>extravagances destroyed.",
     "is_disabled": false,
-    "weight": 1831,
+    "weight": 1843,
     "from_boss": false
   },
   {
@@ -909,7 +909,7 @@
     "art_src": "Emperors_Luck.png",
     "flavour_html": "The house always wins.",
     "is_disabled": false,
-    "weight": 52689,
+    "weight": 52004,
     "from_boss": false
   },
   {
@@ -920,7 +920,7 @@
     "art_src": "Endless_Night.png",
     "flavour_html": "The sun shines not for me. I walk in darkness, never free. Time stopped when you both died in my arms.",
     "is_disabled": false,
-    "weight": 352,
+    "weight": 353,
     "from_boss": false
   },
   {
@@ -942,7 +942,7 @@
     "art_src": "Etched_in_Blood.png",
     "flavour_html": "When you strive to write your name on the dense pages of History, someone else, inevitably, must be crossed out.",
     "is_disabled": false,
-    "weight": 24,
+    "weight": 26,
     "from_boss": false
   },
   {
@@ -953,7 +953,7 @@
     "art_src": "Eternal_Bonds.png",
     "flavour_html": "Separate, stories untold.<br>Together, memories unfold.",
     "is_disabled": false,
-    "weight": 28,
+    "weight": 27,
     "from_boss": false
   },
   {
@@ -1008,7 +1008,7 @@
     "art_src": "Forbidden_Power.png",
     "flavour_html": "Some things should not be used. Some power is too great a risk.",
     "is_disabled": false,
-    "weight": 2003,
+    "weight": 1978,
     "from_boss": false
   },
   {
@@ -1030,7 +1030,7 @@
     "art_src": "From_Bone_to_Ashes.png",
     "flavour_html": "For centuries, they stood vigil in secret over their sleeping goddess, even as contamination oozed out of the decadent Vaal empire.",
     "is_disabled": false,
-    "weight": 163,
+    "weight": 172,
     "from_boss": false
   },
   {
@@ -1052,7 +1052,7 @@
     "art_src": "Gemcutters_Mercy.png",
     "flavour_html": "When you can only have one, which shall it be?<br>Red?<br>Blue?<br>Probably Green.",
     "is_disabled": false,
-    "weight": 92,
+    "weight": 91,
     "from_boss": false
   },
   {
@@ -1063,7 +1063,7 @@
     "art_src": "Gemcutters_Promise.png",
     "flavour_html": "\"I swore to use my position to help the people. What good is power when it just accumulates on the already-powerful?\" - Erasmus, Imperial Gemcutter",
     "is_disabled": false,
-    "weight": 8165,
+    "weight": 8093,
     "from_boss": false
   },
   {
@@ -1074,7 +1074,7 @@
     "art_src": "Gift_of_Asenath.png",
     "flavour_html": "The Golden Sekhema's words could solve many a feud. Just what form that solution took was another matter.",
     "is_disabled": false,
-    "weight": 107,
+    "weight": 102,
     "from_boss": false
   },
   {
@@ -1085,7 +1085,7 @@
     "art_src": "Gift_of_the_Gemling_Queen.png",
     "flavour_html": "Our Lady Dialla,<br>as a symbol of our progress,<br>shines greater than all the gems.",
     "is_disabled": false,
-    "weight": 2000,
+    "weight": 1983,
     "from_boss": false
   },
   {
@@ -1096,7 +1096,7 @@
     "art_src": "Glimmer_of_Hope.png",
     "flavour_html": "When you dwell in total darkness, even the faintest light may guide you out.",
     "is_disabled": false,
-    "weight": 10304,
+    "weight": 10154,
     "from_boss": false
   },
   {
@@ -1107,7 +1107,7 @@
     "art_src": "Grave_Knowledge.png",
     "flavour_html": "The dead tell me great insights. They've had nothing but time to sit and think.",
     "is_disabled": false,
-    "weight": 2757,
+    "weight": 2739,
     "from_boss": false
   },
   {
@@ -1118,7 +1118,7 @@
     "art_src": "Guardians_Challenge.png",
     "flavour_html": "To accept a challenge from the void is merely suicide for the unprepared.",
     "is_disabled": false,
-    "weight": 1335,
+    "weight": 1370,
     "from_boss": false
   },
   {
@@ -1129,7 +1129,7 @@
     "art_src": "Harmony_of_Souls.png",
     "flavour_html": "Shrieking souls locked away <br>Hate splits frozen cells asunder <br>The knot of corruption<br>undone at last",
     "is_disabled": false,
-    "weight": 179,
+    "weight": 178,
     "from_boss": false
   },
   {
@@ -1140,7 +1140,7 @@
     "art_src": "Haunting_Shadows.png",
     "flavour_html": "In the dead of night you may elude your shadows,<br>but they will always find you by dawn.",
     "is_disabled": false,
-    "weight": 629,
+    "weight": 619,
     "from_boss": false
   },
   {
@@ -1151,7 +1151,7 @@
     "art_src": "Heterochromia.png",
     "flavour_html": "Black and White, Silver and Gold<br>Let us see the world Unfold<br>Red and Blue, Yellow and Green<br>Let us remake it in colours Unseen",
     "is_disabled": false,
-    "weight": 1647,
+    "weight": 1665,
     "from_boss": false
   },
   {
@@ -1184,7 +1184,7 @@
     "art_src": "Hope.png",
     "flavour_html": "The others succumbed to madness and depravity, but Lori fought on. Alone in the darkness, she could still see the dull light of hope's distant dawn.",
     "is_disabled": false,
-    "weight": 2123,
+    "weight": 2089,
     "from_boss": false
   },
   {
@@ -1206,7 +1206,7 @@
     "art_src": "Hubris.png",
     "flavour_html": "\"This one? It is NOT for sale. You would sooner pry it from my lifeless hand.\"<br>- Jonfé Darontos, Ringmaker",
     "is_disabled": false,
-    "weight": 6045,
+    "weight": 5926,
     "from_boss": false
   },
   {
@@ -1217,7 +1217,7 @@
     "art_src": "Humility.png",
     "flavour_html": "",
     "is_disabled": false,
-    "weight": 2738,
+    "weight": 2702,
     "from_boss": false
   },
   {
@@ -1228,7 +1228,7 @@
     "art_src": "Hunters_Resolve.png",
     "flavour_html": "Primed, curved and sleek.<br>Decisive and final.<br>For malice and righteousness.<br>There's but one solution.",
     "is_disabled": false,
-    "weight": 9042,
+    "weight": 8999,
     "from_boss": false
   },
   {
@@ -1239,7 +1239,7 @@
     "art_src": "Hunters_Reward.png",
     "flavour_html": "To tame a beast, you first must subdue its heart.",
     "is_disabled": false,
-    "weight": 234,
+    "weight": 229,
     "from_boss": false
   },
   {
@@ -1250,7 +1250,7 @@
     "art_src": "I_See_Brothers.png",
     "flavour_html": "\"Where does the light go<br>when it is dark?\"",
     "is_disabled": false,
-    "weight": 2,
+    "weight": 3,
     "from_boss": false
   },
   {
@@ -1261,7 +1261,7 @@
     "art_src": "Immortal_Resolve.png",
     "flavour_html": "The threads of fate are the strongest ties.",
     "is_disabled": false,
-    "weight": 707,
+    "weight": 719,
     "from_boss": false
   },
   {
@@ -1283,7 +1283,7 @@
     "art_src": "Imperial_Legacy.png",
     "flavour_html": "A life lost, A legacy born.",
     "is_disabled": false,
-    "weight": 12620,
+    "weight": 12476,
     "from_boss": false
   },
   {
@@ -1294,7 +1294,7 @@
     "art_src": "Jack_in_the_Box.png",
     "flavour_html": "Turn the crank, <br>close your eyes, <br>and pray to the gods <br>for a pleasant surprise.",
     "is_disabled": false,
-    "weight": 4503,
+    "weight": 4455,
     "from_boss": false
   },
   {
@@ -1316,7 +1316,7 @@
     "art_src": "Justified_Ambition.png",
     "flavour_html": "\"Everything I have done has been for Wraeclast. You would pledge your life to me if you saw things my way... and soon, you will.\"<br>- High Templar Venarius",
     "is_disabled": false,
-    "weight": 417,
+    "weight": 404,
     "from_boss": false
   },
   {
@@ -1327,7 +1327,7 @@
     "art_src": "Keepers_Corruption.png",
     "flavour_html": "With great power comes...<br><br>...Even greater power.",
     "is_disabled": false,
-    "weight": 20,
+    "weight": 17,
     "from_boss": false
   },
   {
@@ -1338,7 +1338,7 @@
     "art_src": "Lachrymal_Necrosis.png",
     "flavour_html": "Without the ability to weep, the heart hardens against both the pure and the corrupt.",
     "is_disabled": false,
-    "weight": 571,
+    "weight": 550,
     "from_boss": false
   },
   {
@@ -1349,7 +1349,7 @@
     "art_src": "Lantadors_Lost_Love.png",
     "flavour_html": "They fought the storm together as one, <br>Until the longest of days was done. <br>Their love grew stronger<br>with every breath, <br>Until it was broken apart in death.",
     "is_disabled": false,
-    "weight": 17014,
+    "weight": 17065,
     "from_boss": false
   },
   {
@@ -1371,7 +1371,7 @@
     "art_src": "Left_to_Fate.png",
     "flavour_html": "Many strive for greatness,<br>but it is challenge, unforeseen,<br>that forges heroes.",
     "is_disabled": false,
-    "weight": 2984,
+    "weight": 2971,
     "from_boss": false
   },
   {
@@ -1404,7 +1404,7 @@
     "art_src": "Lingering_Remnants.png",
     "flavour_html": "Never dying, yet not living,<br>Endlessly they wander<br>beneath the harvest moon.",
     "is_disabled": false,
-    "weight": 1079,
+    "weight": 1064,
     "from_boss": false
   },
   {
@@ -1426,7 +1426,7 @@
     "art_src": "Lost_Worlds.png",
     "flavour_html": "\"There are worlds that lie beyond the edge of my page, the edge of my understanding. Worlds of wonder. Worlds of terror.\"<br>Aramil - Cartographer to Emperor Chitus",
     "is_disabled": false,
-    "weight": 8093,
+    "weight": 8107,
     "from_boss": false
   },
   {
@@ -1437,7 +1437,7 @@
     "art_src": "Love_Through_Ice.png",
     "flavour_html": "\"I know one lady for whose sake I will rip out my heart\"<br><br>- Derrok, the Dreamer",
     "is_disabled": false,
-    "weight": 3,
+    "weight": 4,
     "from_boss": false
   },
   {
@@ -1448,7 +1448,7 @@
     "art_src": "Loyalty.png",
     "flavour_html": "Bound by fate,<br>inseparable by choice.",
     "is_disabled": false,
-    "weight": 32768,
+    "weight": 33006,
     "from_boss": false
   },
   {
@@ -1470,7 +1470,7 @@
     "art_src": "Lucky_Connections.png",
     "flavour_html": "Luck is a fool's game, and I know plenty of rich fools.",
     "is_disabled": false,
-    "weight": 7840,
+    "weight": 7685,
     "from_boss": false
   },
   {
@@ -1481,7 +1481,7 @@
     "art_src": "Lucky_Deck.png",
     "flavour_html": "When the outcome is the same, does it matter if it is fortune or trickery?",
     "is_disabled": false,
-    "weight": 253,
+    "weight": 245,
     "from_boss": false
   },
   {
@@ -1503,7 +1503,7 @@
     "art_src": "Lysahs_Respite.png",
     "flavour_html": "So many memories,<br>so much pain in<br>such a small token.<br>Drown it in blood<br>so you can forget.",
     "is_disabled": false,
-    "weight": 2145,
+    "weight": 2134,
     "from_boss": false
   },
   {
@@ -1514,7 +1514,7 @@
     "art_src": "Matryoshka.png",
     "flavour_html": "I cannot contain myself,<br>but I can barely squeak,<br>so many words I'd have for you,<br>if I could only speak!",
     "is_disabled": false,
-    "weight": 618,
+    "weight": 648,
     "from_boss": true
   },
   {
@@ -1525,7 +1525,7 @@
     "art_src": "Mawr_Blaidd.png",
     "flavour_html": "Rigwald believed he'd seized great power, but it was the great power that had seized Rigwald",
     "is_disabled": false,
-    "weight": 29,
+    "weight": 28,
     "from_boss": false
   },
   {
@@ -1536,7 +1536,7 @@
     "art_src": "Merciless_Armament.png",
     "flavour_html": "\"Through thick and thin,<br>blood and bone,<br>a peaceful life<br>is one I can't condone.\"<br>- Tukohama, Father Of War",
     "is_disabled": false,
-    "weight": 200,
+    "weight": 196,
     "from_boss": false
   },
   {
@@ -1547,7 +1547,7 @@
     "art_src": "Might_is_Right.png",
     "flavour_html": "The mind had much to endure before the advent of thaumaturgy.",
     "is_disabled": false,
-    "weight": 2814,
+    "weight": 2832,
     "from_boss": false
   },
   {
@@ -1569,7 +1569,7 @@
     "art_src": "Mitts.png",
     "flavour_html": "Those whose hands are their livelihood know the importance of keeping them safe and warm.",
     "is_disabled": false,
-    "weight": 5997,
+    "weight": 5986,
     "from_boss": false
   },
   {
@@ -1580,7 +1580,7 @@
     "art_src": "Monochrome.png",
     "flavour_html": "\"You cannot portray the world using just one colour. Together, you and I, we will paint our world into perfection.\" <br>- Kyra, renegade thaumaturgist",
     "is_disabled": false,
-    "weight": 476,
+    "weight": 473,
     "from_boss": false
   },
   {
@@ -1591,7 +1591,7 @@
     "art_src": "No_Traces.png",
     "flavour_html": "There is no mistake so great that it cannot be undone.",
     "is_disabled": false,
-    "weight": 1976,
+    "weight": 1980,
     "from_boss": false
   },
   {
@@ -1657,7 +1657,7 @@
     "art_src": "Perfection.png",
     "flavour_html": "There are countless worlds, but only those with limitless potential will be able to achieve perfection.",
     "is_disabled": false,
-    "weight": 32,
+    "weight": 35,
     "from_boss": false
   },
   {
@@ -1679,7 +1679,7 @@
     "art_src": "Prejudice.png",
     "flavour_html": "One who is blinded by their past may only see a sliver of the present.",
     "is_disabled": false,
-    "weight": 2169,
+    "weight": 2153,
     "from_boss": false
   },
   {
@@ -1690,7 +1690,7 @@
     "art_src": "Pride_Before_the_Fall.png",
     "flavour_html": "As Kaom slew the last of his kin,<br>something deep inside him broke.<br>And through the cracks, corruption,<br>pure and black, spread forth.",
     "is_disabled": false,
-    "weight": 118,
+    "weight": 121,
     "from_boss": false
   },
   {
@@ -1723,7 +1723,7 @@
     "art_src": "Prosperity.png",
     "flavour_html": "Accumulating wealth has its own costs.",
     "is_disabled": false,
-    "weight": 11892,
+    "weight": 11811,
     "from_boss": false
   },
   {
@@ -1745,7 +1745,7 @@
     "art_src": "Rain_Tempter.png",
     "flavour_html": "Be like water, friend.",
     "is_disabled": false,
-    "weight": 12678,
+    "weight": 12578,
     "from_boss": false
   },
   {
@@ -1756,7 +1756,7 @@
     "art_src": "Rats.png",
     "flavour_html": "Whoever said 'more is always better' has obviously never met a rat.",
     "is_disabled": false,
-    "weight": 15741,
+    "weight": 15564,
     "from_boss": false
   },
   {
@@ -1822,7 +1822,7 @@
     "art_src": "Runic_Luck.png",
     "flavour_html": "If you believe hard enough,<br>you'll win.",
     "is_disabled": false,
-    "weight": 1667,
+    "weight": 1660,
     "from_boss": false
   },
   {
@@ -1833,7 +1833,7 @@
     "art_src": "Sambodhis_Wisdom.png",
     "flavour_html": "No blade conquers sin;<br>guide a sinner to virtue,<br>unveil their lost sight—<br>your eyes, too, see in<br>everyone the inner child,<br>no matter their might.",
     "is_disabled": false,
-    "weight": 45,
+    "weight": 44,
     "from_boss": false
   },
   {
@@ -1844,7 +1844,7 @@
     "art_src": "Scholar_of_the_Seas.png",
     "flavour_html": "I've never come upon a ship I could not command. I have however met sailors that were not willing to be led.",
     "is_disabled": false,
-    "weight": 2206,
+    "weight": 2187,
     "from_boss": false
   },
   {
@@ -1855,7 +1855,7 @@
     "art_src": "Seven_Years_Bad_Luck.png",
     "flavour_html": "If enough people believe something to be true, whether or not it is becomes irrelevant.",
     "is_disabled": false,
-    "weight": 40,
+    "weight": 41,
     "from_boss": false
   },
   {
@@ -1866,7 +1866,7 @@
     "art_src": "Shard_of_Fate.png",
     "flavour_html": "Their whims left unknown,<br>Their life left for others.",
     "is_disabled": false,
-    "weight": 5367,
+    "weight": 5391,
     "from_boss": false
   },
   {
@@ -1888,7 +1888,7 @@
     "art_src": "Societys_Remorse.png",
     "flavour_html": "We live to dream of worlds we aren't in,<br>a false narrative that we use to fill our souls<br>with doubt;<br>The world is already beautiful,<br>there's no need to dream.",
     "is_disabled": false,
-    "weight": 3461,
+    "weight": 3484,
     "from_boss": false
   },
   {
@@ -1899,7 +1899,7 @@
     "art_src": "Something_Dark.png",
     "flavour_html": "Even in darkness you may find a friend.",
     "is_disabled": false,
-    "weight": 567,
+    "weight": 558,
     "from_boss": false
   },
   {
@@ -1921,7 +1921,7 @@
     "art_src": "Struck_by_Lightning.png",
     "flavour_html": "'Lightning never strikes the same place twice'<br>is really just wishful thinking.",
     "is_disabled": false,
-    "weight": 7498,
+    "weight": 7503,
     "from_boss": false
   },
   {
@@ -1954,7 +1954,7 @@
     "art_src": "Terrible_Secret_of_Space.png",
     "flavour_html": "They said they were here to protect us.",
     "is_disabled": false,
-    "weight": 8,
+    "weight": 7,
     "from_boss": true
   },
   {
@@ -1965,7 +1965,7 @@
     "art_src": "The_Academic.png",
     "flavour_html": "\"Such dedication for so many years,<br>all for a couple extra letters at the front of your name...\"",
     "is_disabled": false,
-    "weight": 135,
+    "weight": 139,
     "from_boss": false
   },
   {
@@ -1987,7 +1987,7 @@
     "art_src": "The_Adventuring_Spirit.png",
     "flavour_html": "Dost thou lead my men to victory, my child?",
     "is_disabled": false,
-    "weight": 9373,
+    "weight": 9365,
     "from_boss": false
   },
   {
@@ -1998,7 +1998,7 @@
     "art_src": "The_Aesthete.png",
     "flavour_html": "\"Some see our mortal flesh as a limitation. I see it as an opportunity for vast, miraculous improvements.\"<br>- Shavronne of Umbra",
     "is_disabled": false,
-    "weight": 5645,
+    "weight": 5632,
     "from_boss": false
   },
   {
@@ -2020,7 +2020,7 @@
     "art_src": "The_Archmages_Right_Hand.png",
     "flavour_html": "\"When grasped in his hand, even an ordinary piece of wood can make the heavens tremble with fear.\"",
     "is_disabled": false,
-    "weight": 2312,
+    "weight": 2299,
     "from_boss": false
   },
   {
@@ -2031,7 +2031,7 @@
     "art_src": "The_Arena_Champion.png",
     "flavour_html": "The fight is the easy part. It's the years of training that'll kill you.",
     "is_disabled": false,
-    "weight": 11906,
+    "weight": 11837,
     "from_boss": false
   },
   {
@@ -2042,7 +2042,7 @@
     "art_src": "The_Army_of_Blood.png",
     "flavour_html": "I gave my mind without a fight, <br>The twelfth hour I lost control. <br>The day is gone but there is light, <br>eyes that glow like red-hot coal.",
     "is_disabled": false,
-    "weight": 9196,
+    "weight": 9111,
     "from_boss": false
   },
   {
@@ -2053,7 +2053,7 @@
     "art_src": "The_Artist.png",
     "flavour_html": "\"Paint, metal, flesh... A true artist does not limit himself.\" - Malachai the Soulless",
     "is_disabled": false,
-    "weight": 35,
+    "weight": 37,
     "from_boss": false
   },
   {
@@ -2064,7 +2064,7 @@
     "art_src": "The_Aspirant.png",
     "flavour_html": "Those Exiles that survive Wraeclast<br>dream not of home, but of power.",
     "is_disabled": false,
-    "weight": 18,
+    "weight": 17,
     "from_boss": false
   },
   {
@@ -2086,7 +2086,7 @@
     "art_src": "The_Avenger.png",
     "flavour_html": "Justice comes swift <br>Equal to the crime <br>Revenge is a gift <br>Life for a life <br>Eye for an eye",
     "is_disabled": false,
-    "weight": 163,
+    "weight": 153,
     "from_boss": false
   },
   {
@@ -2108,7 +2108,7 @@
     "art_src": "The_Battle_Born.png",
     "flavour_html": "\"No man can best me, no demon can fell me. For I vanquish all with my axe!\"",
     "is_disabled": false,
-    "weight": 6011,
+    "weight": 5968,
     "from_boss": false
   },
   {
@@ -2119,7 +2119,7 @@
     "art_src": "The_Bear_Woman.png",
     "flavour_html": "For the blessed bear in the cave,<br>A hundred days pass in silence and darkness,<br>until moon begins its fourth passage,<br>the bear sheds her beastly fur,<br>and is reborn, human and whole.",
     "is_disabled": false,
-    "weight": 821,
+    "weight": 809,
     "from_boss": false
   },
   {
@@ -2130,7 +2130,7 @@
     "art_src": "The_Beast.png",
     "flavour_html": "To know the monster, you must become the monster.",
     "is_disabled": false,
-    "weight": 1742,
+    "weight": 1713,
     "from_boss": false
   },
   {
@@ -2141,7 +2141,7 @@
     "art_src": "The_Betrayal.png",
     "flavour_html": "It's sad times we live in when a friendship has a price people are willing to pay.",
     "is_disabled": false,
-    "weight": 2597,
+    "weight": 2578,
     "from_boss": false
   },
   {
@@ -2152,7 +2152,7 @@
     "art_src": "The_Bitter_Blossom.png",
     "flavour_html": "The pain you feel is of no consequence, it is evolution, to be made whole within something greater.",
     "is_disabled": false,
-    "weight": 97,
+    "weight": 98,
     "from_boss": false
   },
   {
@@ -2163,7 +2163,7 @@
     "art_src": "The_Blazing_Fire.png",
     "flavour_html": "Lethal, untouchable, keen, aflame. Just what I was looking for.",
     "is_disabled": false,
-    "weight": 12211,
+    "weight": 12117,
     "from_boss": false
   },
   {
@@ -2174,7 +2174,7 @@
     "art_src": "The_Blessing_of_Moosh.png",
     "flavour_html": "While the Labyrinth traps have claimed countless adventurers, they were not designed with felines in mind.",
     "is_disabled": false,
-    "weight": 140,
+    "weight": 138,
     "from_boss": false
   },
   {
@@ -2185,7 +2185,7 @@
     "art_src": "The_Body.png",
     "flavour_html": "They say it is the head that leads, but all must flow through the body at some point.",
     "is_disabled": false,
-    "weight": 4669,
+    "weight": 4630,
     "from_boss": false
   },
   {
@@ -2196,7 +2196,7 @@
     "art_src": "The_Bones.png",
     "flavour_html": "The flesh is a prison, and we are finally free.",
     "is_disabled": false,
-    "weight": 458,
+    "weight": 465,
     "from_boss": false
   },
   {
@@ -2207,7 +2207,7 @@
     "art_src": "The_Brawny_Battle_Mage.png",
     "flavour_html": "A humble piece of wood offers the simplest solution to life's problems: just hit them really, really hard.",
     "is_disabled": false,
-    "weight": 149,
+    "weight": 156,
     "from_boss": false
   },
   {
@@ -2218,7 +2218,7 @@
     "art_src": "The_Breach.png",
     "flavour_html": "Ever get the feeling you're being watched...?",
     "is_disabled": false,
-    "weight": 210,
+    "weight": 201,
     "from_boss": false
   },
   {
@@ -2229,7 +2229,7 @@
     "art_src": "The_Brittle_Emperor.png",
     "flavour_html": "\"When Voll spared Malachai, accepting his aid in pursuit of Purity, the strongest faith was infected by Corruption and made brittle as glass.\"<br>- Victario, the People's Poet",
     "is_disabled": false,
-    "weight": 112,
+    "weight": 114,
     "from_boss": false
   },
   {
@@ -2240,7 +2240,7 @@
     "art_src": "The_Cache.png",
     "flavour_html": "Vintage or crafted, Glittering and shiny<br>Dusty or glittering, huge or tiny<br>Secured within a chest <br>or unearthed from your mining<br>Find jewellery everywhere, <br>no need for divining!<br>So why is it so hard <br>to figure out which one to wear?<br>This one makes me stronger, <br>but does it match my hair?",
     "is_disabled": false,
-    "weight": 7014,
+    "weight": 6931,
     "from_boss": false
   },
   {
@@ -2251,7 +2251,7 @@
     "art_src": "The_Cacophony.png",
     "flavour_html": "Nothing can be heard above the din or seen amongst the turmoil. The senses are shattered. All is left to fate.",
     "is_disabled": false,
-    "weight": 176,
+    "weight": 178,
     "from_boss": false
   },
   {
@@ -2262,7 +2262,7 @@
     "art_src": "The_Calling.png",
     "flavour_html": "Blood flows not just through veins, but through worlds.",
     "is_disabled": false,
-    "weight": 4295,
+    "weight": 4223,
     "from_boss": false
   },
   {
@@ -2273,7 +2273,7 @@
     "art_src": "The_Carrion_Crow.png",
     "flavour_html": "From death, life. <br>From life, death. <br>The wheel turns, <br>and the corbies wheel overhead.",
     "is_disabled": false,
-    "weight": 24027,
+    "weight": 23950,
     "from_boss": false
   },
   {
@@ -2284,7 +2284,7 @@
     "art_src": "The_Cataclysm.png",
     "flavour_html": "The mighty warriors traded in blows, the nimble archers in arrows, yet it was the brazen thaumaturgists who would bring catastrophe to all.",
     "is_disabled": false,
-    "weight": 2366,
+    "weight": 2381,
     "from_boss": false
   },
   {
@@ -2295,7 +2295,7 @@
     "art_src": "The_Catalyst.png",
     "flavour_html": "Simple actions can lead the world to an early grave.",
     "is_disabled": false,
-    "weight": 25627,
+    "weight": 25600,
     "from_boss": false
   },
   {
@@ -2306,7 +2306,7 @@
     "art_src": "The_Catch.png",
     "flavour_html": "The largest hooks offer the greatest catch, but often the catch is the hook.",
     "is_disabled": false,
-    "weight": 15,
+    "weight": 16,
     "from_boss": false
   },
   {
@@ -2317,7 +2317,7 @@
     "art_src": "The_Celestial_Justicar.png",
     "flavour_html": "Wrapped in the glory of the heavens, she comes to mete out justice for the fallen.",
     "is_disabled": false,
-    "weight": 737,
+    "weight": 739,
     "from_boss": false
   },
   {
@@ -2328,7 +2328,7 @@
     "art_src": "The_Celestial_Stone.png",
     "flavour_html": "Stare into its depths too long, and you may lose yourself entirely.",
     "is_disabled": false,
-    "weight": 27,
+    "weight": 28,
     "from_boss": false
   },
   {
@@ -2339,7 +2339,7 @@
     "art_src": "The_Chains_that_Bind.png",
     "flavour_html": "Scarier than any criminal is an innocent man in chains, for when he breaks free, his revenge will be justified.",
     "is_disabled": false,
-    "weight": 9393,
+    "weight": 9470,
     "from_boss": false
   },
   {
@@ -2361,7 +2361,7 @@
     "art_src": "The_Coming_Storm.png",
     "flavour_html": "No man may hope to turn back the storm. You can only hope you do not attract its ire.",
     "is_disabled": false,
-    "weight": 2414,
+    "weight": 2386,
     "from_boss": false
   },
   {
@@ -2372,7 +2372,7 @@
     "art_src": "The_Conduit.png",
     "flavour_html": "The path to godhood is guided by the hand of sacrifice.",
     "is_disabled": false,
-    "weight": 496,
+    "weight": 493,
     "from_boss": false
   },
   {
@@ -2383,7 +2383,7 @@
     "art_src": "The_Craving.png",
     "flavour_html": "What was once a passing thought tickling the back of the mind is now a desperate, driving desire.",
     "is_disabled": false,
-    "weight": 80,
+    "weight": 82,
     "from_boss": false
   },
   {
@@ -2394,7 +2394,7 @@
     "art_src": "The_Cursed_King.png",
     "flavour_html": "The First Ones<br>may be blasphemy,<br>but they are<br>powerful blasphemy.",
     "is_disabled": false,
-    "weight": 675,
+    "weight": 668,
     "from_boss": false
   },
   {
@@ -2416,7 +2416,7 @@
     "art_src": "The_Dapper_Prodigy.png",
     "flavour_html": "\"Many believe murder is a grisly, grim, and grotesque crime. Then there are those who simply make art of it.\"",
     "is_disabled": false,
-    "weight": 2383,
+    "weight": 2442,
     "from_boss": false
   },
   {
@@ -2427,7 +2427,7 @@
     "art_src": "The_Dark_Mage.png",
     "flavour_html": "With staff in hand<br>and wrath in heart,<br>your soul and corpse<br>shall surely part.",
     "is_disabled": false,
-    "weight": 1074,
+    "weight": 1045,
     "from_boss": false
   },
   {
@@ -2438,7 +2438,7 @@
     "art_src": "The_Darkest_Dream.png",
     "flavour_html": "A dream from which you cannot awake is nothing other than a nightmare.",
     "is_disabled": false,
-    "weight": 288,
+    "weight": 278,
     "from_boss": false
   },
   {
@@ -2449,7 +2449,7 @@
     "art_src": "The_Deceiver.png",
     "flavour_html": "Beware the combatant who shows no confidence, yet still enters the ring, for they are surely hiding something.",
     "is_disabled": false,
-    "weight": 1759,
+    "weight": 1703,
     "from_boss": false
   },
   {
@@ -2460,7 +2460,7 @@
     "art_src": "The_Deep_Ones.png",
     "flavour_html": "\"The Seas Call, the Mad Answer\"",
     "is_disabled": false,
-    "weight": 149,
+    "weight": 141,
     "from_boss": false
   },
   {
@@ -2482,7 +2482,7 @@
     "art_src": "The_Demoness.png",
     "flavour_html": "Wherever she went, death was sure to follow.",
     "is_disabled": false,
-    "weight": 10104,
+    "weight": 10094,
     "from_boss": false
   },
   {
@@ -2515,7 +2515,7 @@
     "art_src": "The_Doppelganger.png",
     "flavour_html": "Upon seeing her face, I am terrified—the moon shows me my own form!",
     "is_disabled": false,
-    "weight": 20410,
+    "weight": 20322,
     "from_boss": false
   },
   {
@@ -2526,7 +2526,7 @@
     "art_src": "The_Dragon.png",
     "flavour_html": "Scaly beast of the skies,<br>watching with his golden eyes.<br>Shadow that blocks out the sun,<br>it's too late for you to run.",
     "is_disabled": false,
-    "weight": 6131,
+    "weight": 6113,
     "from_boss": false
   },
   {
@@ -2537,7 +2537,7 @@
     "art_src": "The_Dragons_Heart.png",
     "flavour_html": "They say when a dragon dies, the flesh smoulders and burns until all that remains is the still, white-hot, heart.",
     "is_disabled": false,
-    "weight": 31,
+    "weight": 33,
     "from_boss": false
   },
   {
@@ -2548,7 +2548,7 @@
     "art_src": "The_Dreamer.png",
     "flavour_html": "A dark note drips <br>from the dreamer's lips, <br>A honeyed melody. <br>We stand, we fall <br>on his beck and call, <br>for in his dream we're free.",
     "is_disabled": false,
-    "weight": 100,
+    "weight": 97,
     "from_boss": false
   },
   {
@@ -2559,7 +2559,7 @@
     "art_src": "The_Dreamland.png",
     "flavour_html": "All dreams vanish when the dreamers wake.",
     "is_disabled": false,
-    "weight": 1125,
+    "weight": 1138,
     "from_boss": false
   },
   {
@@ -2570,7 +2570,7 @@
     "art_src": "The_Drunken_Aristocrat.png",
     "flavour_html": "The finer the brew, the harder it is to remember drinking it.",
     "is_disabled": false,
-    "weight": 2408,
+    "weight": 2341,
     "from_boss": false
   },
   {
@@ -2592,7 +2592,7 @@
     "art_src": "The_Easy_Stroll.png",
     "flavour_html": "\"I'm going for a walk. I'll be back soon.\"<br><br> - Blonca's last words",
     "is_disabled": false,
-    "weight": 1628,
+    "weight": 1615,
     "from_boss": false
   },
   {
@@ -2614,7 +2614,7 @@
     "art_src": "The_Encroaching_Darkness.png",
     "flavour_html": "No matter where your dreams take you, Nightmare follows close behind.",
     "is_disabled": false,
-    "weight": 916,
+    "weight": 885,
     "from_boss": false
   },
   {
@@ -2636,7 +2636,7 @@
     "art_src": "The_Endurance.png",
     "flavour_html": "Crimson rubies, drops of vigour,<br>flowing through my veins,<br>flesh like coal, try to crush me,<br>diamond is what remains.",
     "is_disabled": false,
-    "weight": 5372,
+    "weight": 5331,
     "from_boss": false
   },
   {
@@ -2647,7 +2647,7 @@
     "art_src": "The_Enforcer.png",
     "flavour_html": "\"Boss said to get rid of him, didn't say not to make a mess.\"<br>- Rune The Goon",
     "is_disabled": false,
-    "weight": 8,
+    "weight": 7,
     "from_boss": false
   },
   {
@@ -2658,7 +2658,7 @@
     "art_src": "The_Enlightened.png",
     "flavour_html": "Weaving the six,<br>a serpent stands tall.<br>Wearing a crown,<br>the thousand petals call.",
     "is_disabled": false,
-    "weight": 62,
+    "weight": 59,
     "from_boss": false
   },
   {
@@ -2669,7 +2669,7 @@
     "art_src": "The_Enthusiasts.png",
     "flavour_html": "\"Glimmers of benevolence,<br>Shrouded a lacquered lust for power,<br>Yet still they followed his influence.\"",
     "is_disabled": false,
-    "weight": 309,
+    "weight": 317,
     "from_boss": false
   },
   {
@@ -2680,7 +2680,7 @@
     "art_src": "The_Escape.png",
     "flavour_html": "In fleeing reality, you step into the realm of madness.",
     "is_disabled": false,
-    "weight": 548,
+    "weight": 536,
     "from_boss": false
   },
   {
@@ -2702,7 +2702,7 @@
     "art_src": "The_Ethereal.png",
     "flavour_html": "\"Long ago, people looked to the stars, believing they influenced us. Soon, it will be us who influence the stars.\"<br>- Doryani, Queen's Thaumaturge",
     "is_disabled": false,
-    "weight": 515,
+    "weight": 509,
     "from_boss": false
   },
   {
@@ -2724,7 +2724,7 @@
     "art_src": "The_Explorer.png",
     "flavour_html": "A map is only useful if you know where you stand.",
     "is_disabled": false,
-    "weight": 8058,
+    "weight": 8007,
     "from_boss": false
   },
   {
@@ -2735,7 +2735,7 @@
     "art_src": "The_Eye_of_Terror.png",
     "flavour_html": "The Lord of Chaos dreams as his Eye gazes, unblinking, at his prize. And soon, all shall tremble before his waking form.",
     "is_disabled": false,
-    "weight": 15,
+    "weight": 16,
     "from_boss": true
   },
   {
@@ -2746,7 +2746,7 @@
     "art_src": "The_Eye_of_the_Dragon.png",
     "flavour_html": "Some powers are far too great even for the<br>gods of old.",
     "is_disabled": false,
-    "weight": 47,
+    "weight": 49,
     "from_boss": false
   },
   {
@@ -2768,7 +2768,7 @@
     "art_src": "The_Feast.png",
     "flavour_html": "Shame what happened to my husband. He had such good taste.",
     "is_disabled": false,
-    "weight": 2137,
+    "weight": 2096,
     "from_boss": false
   },
   {
@@ -2790,7 +2790,7 @@
     "art_src": "The_Finishing_Touch.png",
     "flavour_html": "A little extra flair never hurts.",
     "is_disabled": false,
-    "weight": 462,
+    "weight": 447,
     "from_boss": false
   },
   {
@@ -2812,7 +2812,7 @@
     "art_src": "The_Fletcher.png",
     "flavour_html": "Let these fine arrows pack a punch.",
     "is_disabled": false,
-    "weight": 1939,
+    "weight": 1942,
     "from_boss": false
   },
   {
@@ -2823,7 +2823,7 @@
     "art_src": "The_Floras_Gift.png",
     "flavour_html": "Sturdy and strong,<br>grown from the stream.<br>The Flora that live here,<br>A combatant's dream.",
     "is_disabled": false,
-    "weight": 28402,
+    "weight": 28161,
     "from_boss": false
   },
   {
@@ -2834,7 +2834,7 @@
     "art_src": "The_Fool.png",
     "flavour_html": "Even the most learned man is a fool to his own fate.",
     "is_disabled": false,
-    "weight": 137,
+    "weight": 134,
     "from_boss": false
   },
   {
@@ -2845,7 +2845,7 @@
     "art_src": "The_Forbidden_Fruit.png",
     "flavour_html": "It's about working smarter,<br>not harder.",
     "is_disabled": false,
-    "weight": 241,
+    "weight": 239,
     "from_boss": false
   },
   {
@@ -2867,7 +2867,7 @@
     "art_src": "The_Formless_Sea.png",
     "flavour_html": "Formless might,<br>Wild beauty tamed,<br>The brine of gods,<br>The seas restrained.",
     "is_disabled": false,
-    "weight": 11,
+    "weight": 12,
     "from_boss": false
   },
   {
@@ -2878,7 +2878,7 @@
     "art_src": "The_Forsaken.png",
     "flavour_html": "You gave us life and love, more than you could spare. Now you're gone, and we are stranded, alone, cold and without purpose.",
     "is_disabled": false,
-    "weight": 2129,
+    "weight": 2100,
     "from_boss": false
   },
   {
@@ -2889,7 +2889,7 @@
     "art_src": "The_Fortunate.png",
     "flavour_html": "The fortunate find <br>generosity in the divine.",
     "is_disabled": false,
-    "weight": 1239,
+    "weight": 1217,
     "from_boss": false
   },
   {
@@ -2900,7 +2900,7 @@
     "art_src": "The_Forward_Gaze.png",
     "flavour_html": "\"When they realize our true intent, they will decry us, assault us, and try to crush what we have built. We must stand tall, Qotra, and make the future our own.\"",
     "is_disabled": false,
-    "weight": 1135,
+    "weight": 1131,
     "from_boss": false
   },
   {
@@ -2911,7 +2911,7 @@
     "art_src": "The_Fox.png",
     "flavour_html": "\"Masters of wit, strength and cunning. To survive the harsh winters, you must be like the fox.\"<br>- Ezomyte Proverb",
     "is_disabled": false,
-    "weight": 2210,
+    "weight": 2160,
     "from_boss": false
   },
   {
@@ -2922,7 +2922,7 @@
     "art_src": "The_Fox_in_the_Brambles.png",
     "flavour_html": "Hemmingsworth 6:10 - \"And the fox gazed out from the brambles, unreachable and smirking.\"",
     "is_disabled": false,
-    "weight": 772,
+    "weight": 742,
     "from_boss": false
   },
   {
@@ -2933,7 +2933,7 @@
     "art_src": "The_Gambler.png",
     "flavour_html": "\"I don't believe in karma. If it were real, I would never win.\"",
     "is_disabled": false,
-    "weight": 5269,
+    "weight": 5256,
     "from_boss": false
   },
   {
@@ -2944,7 +2944,7 @@
     "art_src": "The_Garish_Power.png",
     "flavour_html": "Maligaro may have valued function over form, but that did not mute his flair for the dramatic.",
     "is_disabled": false,
-    "weight": 88,
+    "weight": 83,
     "from_boss": false
   },
   {
@@ -2955,7 +2955,7 @@
     "art_src": "The_Gemcutter.png",
     "flavour_html": "In the hands of a master craftsman, a worthless pebble can adorn the crown of a king.",
     "is_disabled": false,
-    "weight": 5277,
+    "weight": 5223,
     "from_boss": false
   },
   {
@@ -2966,7 +2966,7 @@
     "art_src": "The_Gentleman.png",
     "flavour_html": "\"Axes and mauls are so uncivilised. A good clean cut to the neck with a sharp blade, that's the Sarn way!\"",
     "is_disabled": false,
-    "weight": 1176,
+    "weight": 1154,
     "from_boss": false
   },
   {
@@ -2977,7 +2977,7 @@
     "art_src": "The_Gladiator.png",
     "flavour_html": "The thumb turns down<br>and the crowd roars, <br>they want death <br>and the blood is yours.",
     "is_disabled": false,
-    "weight": 6028,
+    "weight": 6018,
     "from_boss": false
   },
   {
@@ -2988,7 +2988,7 @@
     "art_src": "The_Golden_Era.png",
     "flavour_html": "Before gemlings, before thaumaturgy, a simple court magician could enthrall the masses.",
     "is_disabled": false,
-    "weight": 1293,
+    "weight": 1301,
     "from_boss": false
   },
   {
@@ -3021,7 +3021,7 @@
     "art_src": "The_Hale_Heart.png",
     "flavour_html": "Though the years weakened his mind, his body remained deadly as ever.",
     "is_disabled": false,
-    "weight": 42,
+    "weight": 41,
     "from_boss": false
   },
   {
@@ -3032,7 +3032,7 @@
     "art_src": "The_Harvester.png",
     "flavour_html": "Taste not of their<br>forbidden fruit.<br>Theirs is a harvest of<br>the darkest kind,<br>twisted, rotten and<br>damned for eternity.",
     "is_disabled": false,
-    "weight": 16264,
+    "weight": 16173,
     "from_boss": false
   },
   {
@@ -3043,7 +3043,7 @@
     "art_src": "The_Hermit.png",
     "flavour_html": "The hermit's only friend is the greenery he can find.",
     "is_disabled": false,
-    "weight": 17349,
+    "weight": 17292,
     "from_boss": false
   },
   {
@@ -3054,7 +3054,7 @@
     "art_src": "The_Heroic_Shot.png",
     "flavour_html": "Try a thousand times, and eventually you'll have to give up.",
     "is_disabled": false,
-    "weight": 98,
+    "weight": 104,
     "from_boss": false
   },
   {
@@ -3065,7 +3065,7 @@
     "art_src": "The_Hive_of_Knowledge.png",
     "flavour_html": "Within years of knowledge, distilled by careful craftsmanship, lies great power.",
     "is_disabled": false,
-    "weight": 20,
+    "weight": 19,
     "from_boss": false
   },
   {
@@ -3076,7 +3076,7 @@
     "art_src": "The_Hoarder.png",
     "flavour_html": "\"More! I want more!\" - Faendris, the Insatiable",
     "is_disabled": false,
-    "weight": 24789,
+    "weight": 24584,
     "from_boss": false
   },
   {
@@ -3087,7 +3087,7 @@
     "art_src": "The_Hook.png",
     "flavour_html": "Every obsession began with a single, innocent taste.",
     "is_disabled": false,
-    "weight": 73,
+    "weight": 74,
     "from_boss": false
   },
   {
@@ -3098,7 +3098,7 @@
     "art_src": "The_Hunger.png",
     "flavour_html": "\"How many lives have you consumed?\" <br>\"How many times have you blinked?\"",
     "is_disabled": false,
-    "weight": 461,
+    "weight": 458,
     "from_boss": false
   },
   {
@@ -3109,7 +3109,7 @@
     "art_src": "The_Immortal.png",
     "flavour_html": "\"Greetings! Just because you think I'm greedy doesn't mean I'm not willing to share. You'll just have to kill me first.\"<br>-Grandmaster Dy'Ness",
     "is_disabled": false,
-    "weight": 19,
+    "weight": 18,
     "from_boss": false
   },
   {
@@ -3120,7 +3120,7 @@
     "art_src": "The_Incantation.png",
     "flavour_html": "When there is no other choice, even the meekest whisper can bring about the greatest storm.",
     "is_disabled": false,
-    "weight": 1288,
+    "weight": 1258,
     "from_boss": false
   },
   {
@@ -3131,7 +3131,7 @@
     "art_src": "The_Innocent.png",
     "flavour_html": "His brother would not atone, so he took his brother's life, and with it, his sins.",
     "is_disabled": false,
-    "weight": 434,
+    "weight": 441,
     "from_boss": false
   },
   {
@@ -3142,7 +3142,7 @@
     "art_src": "The_Inoculated.png",
     "flavour_html": "Chaos spread, wreaking havoc and death. They said none would be spared, and yet here I stand.",
     "is_disabled": false,
-    "weight": 6791,
+    "weight": 6824,
     "from_boss": false
   },
   {
@@ -3164,7 +3164,7 @@
     "art_src": "The_Insatiable.png",
     "flavour_html": "A lust for souls. The urge to kill just to satisfy its thirst. An unbearable burden that would make even the purest heart blacken over time.",
     "is_disabled": false,
-    "weight": 1145,
+    "weight": 1189,
     "from_boss": false
   },
   {
@@ -3175,7 +3175,7 @@
     "art_src": "The_Inventor.png",
     "flavour_html": "Jump right in, <br>But beware <br>Of things broken <br>Or beyond compare.",
     "is_disabled": false,
-    "weight": 6375,
+    "weight": 6303,
     "from_boss": false
   },
   {
@@ -3186,7 +3186,7 @@
     "art_src": "The_Jester.png",
     "flavour_html": "Summoned for the King's desire,<br>soon applause came from the court.<br>However insanity was his only sire,<br>so the King's reign was cut short.",
     "is_disabled": false,
-    "weight": 371,
+    "weight": 369,
     "from_boss": false
   },
   {
@@ -3197,7 +3197,7 @@
     "art_src": "The_Jewellers_Boon.png",
     "flavour_html": "The jeweller's true talent is the capacity to see a jewel's beauty before they draw it out.",
     "is_disabled": false,
-    "weight": 3930,
+    "weight": 3827,
     "from_boss": false
   },
   {
@@ -3208,7 +3208,7 @@
     "art_src": "The_Journalist.png",
     "flavour_html": "A good spy doesn't forget she's gone undercover.",
     "is_disabled": false,
-    "weight": 11985,
+    "weight": 11881,
     "from_boss": false
   },
   {
@@ -3230,7 +3230,7 @@
     "art_src": "The_Kings_Blade.png",
     "flavour_html": "\"To know for what you fight. To get up again when you've been struck down. To outmanoeuvre someone faster, trick someone smarter, crush someone stronger. That's what it takes to claim the crown.\"<br>- Daresso, the King of Swords",
     "is_disabled": false,
-    "weight": 43750,
+    "weight": 43595,
     "from_boss": false
   },
   {
@@ -3241,7 +3241,7 @@
     "art_src": "The_Kings_Heart.png",
     "flavour_html": "500 times Kaom's axe fell, 500 times Kaom's Heart splintered. Finally, all that remained was a terrible, heartless Fury.",
     "is_disabled": false,
-    "weight": 479,
+    "weight": 478,
     "from_boss": false
   },
   {
@@ -3252,7 +3252,7 @@
     "art_src": "The_Lake.png",
     "flavour_html": "Gaze upon the Lake<br>Gaze upon your Reflection<br>Your full Potential",
     "is_disabled": false,
-    "weight": 4,
+    "weight": 3,
     "from_boss": false
   },
   {
@@ -3263,7 +3263,7 @@
     "art_src": "The_Last_Laugh.png",
     "flavour_html": "Holding fast when shadows fall,<br>Over ruins, jesters call.<br>Nothing breaks their twisted cheer,<br>Kings of chaos, friends sincere.",
     "is_disabled": false,
-    "weight": 373,
+    "weight": 370,
     "from_boss": false
   },
   {
@@ -3285,7 +3285,7 @@
     "art_src": "The_Last_Supper.png",
     "flavour_html": "\"Bino's brief career as a chef at Axiom saved the executioner a lot of work.\"",
     "is_disabled": false,
-    "weight": 14,
+    "weight": 13,
     "from_boss": false
   },
   {
@@ -3307,7 +3307,7 @@
     "art_src": "The_Lich.png",
     "flavour_html": "When the dead raise and master their own, the land is truly lost.",
     "is_disabled": false,
-    "weight": 4510,
+    "weight": 4566,
     "from_boss": false
   },
   {
@@ -3329,7 +3329,7 @@
     "art_src": "The_Lion.png",
     "flavour_html": "The Eternals lauded his valour. The Karui relished his defeat. Yet the final thoughts of Marceus Lioneye were naught but lament for his pride.",
     "is_disabled": false,
-    "weight": 4156,
+    "weight": 4117,
     "from_boss": false
   },
   {
@@ -3351,7 +3351,7 @@
     "art_src": "The_Long_Watch.png",
     "flavour_html": "The rain pelts down, Mud grasping at his feet, as thoughts of those in his care bolster his resolve.",
     "is_disabled": false,
-    "weight": 68,
+    "weight": 69,
     "from_boss": false
   },
   {
@@ -3362,7 +3362,7 @@
     "art_src": "The_Lord_in_Black.png",
     "flavour_html": "Thy knee shall bend<br>in shifting dark,<br>thy blade shall serve his vigil.<br>Thy oath shall bind thee<br>to his mark,<br>thy flesh shall bear his sigil.",
     "is_disabled": false,
-    "weight": 950,
+    "weight": 944,
     "from_boss": false
   },
   {
@@ -3373,7 +3373,7 @@
     "art_src": "The_Lord_of_Celebration.png",
     "flavour_html": "Though they were a pack of elite combatants, the Emperor's royal guards were not ready to face one of his notorious parties.",
     "is_disabled": false,
-    "weight": 730,
+    "weight": 734,
     "from_boss": false
   },
   {
@@ -3384,7 +3384,7 @@
     "art_src": "The_Lover.png",
     "flavour_html": "\"I wanted to give you three things. I've given you my eternal love. I've sung to you my most beautiful song. I'd have given you the moon last, but it couldn't be found. I hope you'll accept this instead.\"",
     "is_disabled": false,
-    "weight": 63596,
+    "weight": 63446,
     "from_boss": false
   },
   {
@@ -3395,7 +3395,7 @@
     "art_src": "The_Lunaris_Priestess.png",
     "flavour_html": "Embrace the Light,<br>Await the Morrow,<br>No more Spite,<br>And no more Sorrow.",
     "is_disabled": false,
-    "weight": 7831,
+    "weight": 7823,
     "from_boss": false
   },
   {
@@ -3417,7 +3417,7 @@
     "art_src": "The_Magma_Crab.png",
     "flavour_html": "Drink deeply of living rock and be as stone, with blood afire.",
     "is_disabled": false,
-    "weight": 395,
+    "weight": 394,
     "from_boss": false
   },
   {
@@ -3428,7 +3428,7 @@
     "art_src": "The_Master_Artisan.png",
     "flavour_html": "Perfection is the standard, excellence will be handled on a case by case basis.",
     "is_disabled": false,
-    "weight": 3272,
+    "weight": 3242,
     "from_boss": false
   },
   {
@@ -3450,7 +3450,7 @@
     "art_src": "The_Mercenary.png",
     "flavour_html": "Loyalty can be bought. Just make sure you know who the buyer is.",
     "is_disabled": false,
-    "weight": 1505,
+    "weight": 1503,
     "from_boss": false
   },
   {
@@ -3461,7 +3461,7 @@
     "art_src": "The_Messenger.png",
     "flavour_html": "",
     "is_disabled": false,
-    "weight": 649,
+    "weight": 646,
     "from_boss": true
   },
   {
@@ -3472,7 +3472,7 @@
     "art_src": "The_Metalsmiths_Gift.png",
     "flavour_html": "A month's work, a year's wages, a foolish shortcut through a Rhoa's nest, and a grieving bride-to-be, who never received her betrothed's great gift.",
     "is_disabled": false,
-    "weight": 35044,
+    "weight": 34793,
     "from_boss": false
   },
   {
@@ -3483,7 +3483,7 @@
     "art_src": "The_Minds_Eyes.png",
     "flavour_html": "Through the eyes of a person, <br>you can see their soul<br>Through the eyes of a jewel, <br>you can see the universe",
     "is_disabled": false,
-    "weight": 384,
+    "weight": 377,
     "from_boss": false
   },
   {
@@ -3505,7 +3505,7 @@
     "art_src": "The_Mountain.png",
     "flavour_html": "Charmed by beautiful stones <br>Consumed with the <br>pursuit of perfection <br>Ever deeper into the waiting dark",
     "is_disabled": false,
-    "weight": 5179,
+    "weight": 5163,
     "from_boss": false
   },
   {
@@ -3516,7 +3516,7 @@
     "art_src": "The_Nurse.png",
     "flavour_html": "We tried to tell him to get his head checked.",
     "is_disabled": false,
-    "weight": 114,
+    "weight": 112,
     "from_boss": false
   },
   {
@@ -3527,7 +3527,7 @@
     "art_src": "The_Oath.png",
     "flavour_html": "An oath once made is an oath never broken. Do not delay in keeping it, for I take no pleasure in fools.",
     "is_disabled": false,
-    "weight": 1858,
+    "weight": 1806,
     "from_boss": false
   },
   {
@@ -3538,7 +3538,7 @@
     "art_src": "The_Offering.png",
     "flavour_html": "Eternal beauty has a cost, one which Shavronne was happy to pay with the lives of others.",
     "is_disabled": false,
-    "weight": 376,
+    "weight": 369,
     "from_boss": false
   },
   {
@@ -3549,7 +3549,7 @@
     "art_src": "The_Offspring.png",
     "flavour_html": "The swarm began with just a couple of children. Now, it is her entire existence.",
     "is_disabled": false,
-    "weight": 246,
+    "weight": 250,
     "from_boss": false
   },
   {
@@ -3560,7 +3560,7 @@
     "art_src": "The_Old_Man.png",
     "flavour_html": "Hear me, fish! I love and respect you, but before this day ends I will kill you dead.",
     "is_disabled": false,
-    "weight": 3,
+    "weight": 4,
     "from_boss": false
   },
   {
@@ -3571,7 +3571,7 @@
     "art_src": "The_One_That_Got_Away.png",
     "flavour_html": "Savor life's missing pieces.<br>To complete one's final goal<br>is to take one's last breath.",
     "is_disabled": false,
-    "weight": 4,
+    "weight": 3,
     "from_boss": false
   },
   {
@@ -3582,7 +3582,7 @@
     "art_src": "The_One_With_All.png",
     "flavour_html": "Embrace death to honour the lost,<br>no fear in life no matter the cost. <br>With one of all we are, <br>and all of one we trust, <br>throughout past, present and future... be just.",
     "is_disabled": false,
-    "weight": 2356,
+    "weight": 2355,
     "from_boss": false
   },
   {
@@ -3593,7 +3593,7 @@
     "art_src": "The_Opulent.png",
     "flavour_html": "Wealth can, in fact, buy happiness.",
     "is_disabled": false,
-    "weight": 11679,
+    "weight": 11502,
     "from_boss": false
   },
   {
@@ -3604,7 +3604,7 @@
     "art_src": "The_Pack_Leader.png",
     "flavour_html": "Become the leader you were born to be.",
     "is_disabled": false,
-    "weight": 1852,
+    "weight": 1834,
     "from_boss": false
   },
   {
@@ -3626,7 +3626,7 @@
     "art_src": "The_Patient.png",
     "flavour_html": "I have a headache, can anyone find me a nurse?",
     "is_disabled": false,
-    "weight": 722,
+    "weight": 735,
     "from_boss": false
   },
   {
@@ -3637,7 +3637,7 @@
     "art_src": "The_Penitent.png",
     "flavour_html": "First, I gave my wealth, and we went hungry. Next, I gave my land, and we were homeless. Then, I gave my family, and I was alone. Last, I gave my eyes, and all I could dream was mine.",
     "is_disabled": false,
-    "weight": 5903,
+    "weight": 5923,
     "from_boss": false
   },
   {
@@ -3648,7 +3648,7 @@
     "art_src": "The_Poet.png",
     "flavour_html": "God had forsaken the land <br>And Victario wept.<br>Corruption consumed the land <br>And Victario's tears turned to blood.",
     "is_disabled": false,
-    "weight": 1852,
+    "weight": 1845,
     "from_boss": false
   },
   {
@@ -3659,7 +3659,7 @@
     "art_src": "The_Polymath.png",
     "flavour_html": "Genius knows no limits.",
     "is_disabled": false,
-    "weight": 124,
+    "weight": 126,
     "from_boss": false
   },
   {
@@ -3670,7 +3670,7 @@
     "art_src": "The_Porcupine.png",
     "flavour_html": "The first quill separates the quick learners from the dead.",
     "is_disabled": false,
-    "weight": 3732,
+    "weight": 3750,
     "from_boss": false
   },
   {
@@ -3692,7 +3692,7 @@
     "art_src": "The_Price_of_Loyalty.png",
     "flavour_html": "\"Forge me a carapace from their skin, imbued with their soul. Then feed their flesh to the hounds.\"",
     "is_disabled": false,
-    "weight": 3,
+    "weight": 2,
     "from_boss": false
   },
   {
@@ -3703,7 +3703,7 @@
     "art_src": "The_Price_of_Prescience.png",
     "flavour_html": "The strange voice showed Aul a future where his legacy was forgotten, where new cultures broke themselves upon Aul's ruined world.",
     "is_disabled": false,
-    "weight": 181,
+    "weight": 188,
     "from_boss": false
   },
   {
@@ -3714,7 +3714,7 @@
     "art_src": "The_Price_of_Protection.png",
     "flavour_html": "To protect her mansion, she would cut a deal with anyone. Anything. <br><br>Something answered.",
     "is_disabled": false,
-    "weight": 1494,
+    "weight": 1481,
     "from_boss": false
   },
   {
@@ -3725,7 +3725,7 @@
     "art_src": "The_Primordial.png",
     "flavour_html": "We play at God with our necromancy, <br>but forces far more potent <br>sleep within these stones.",
     "is_disabled": false,
-    "weight": 868,
+    "weight": 870,
     "from_boss": false
   },
   {
@@ -3736,7 +3736,7 @@
     "art_src": "The_Prince_of_Darkness.png",
     "flavour_html": "Fear a man who is willing to sacrifice anything for power.",
     "is_disabled": false,
-    "weight": 185,
+    "weight": 181,
     "from_boss": false
   },
   {
@@ -3747,7 +3747,7 @@
     "art_src": "The_Professor.png",
     "flavour_html": "The academic route to knowledge is wide and well-trodden; but it is the untaught one who scales the mountain.",
     "is_disabled": false,
-    "weight": 140,
+    "weight": 147,
     "from_boss": false
   },
   {
@@ -3780,7 +3780,7 @@
     "art_src": "The_Rabid_Rhoa.png",
     "flavour_html": "\"Experiment 22A: Rhoas, when deprived of water, secrete a most delightfully potent toxin.\"<br>- Maligaro",
     "is_disabled": false,
-    "weight": 5114,
+    "weight": 5109,
     "from_boss": false
   },
   {
@@ -3791,7 +3791,7 @@
     "art_src": "The_Realm.png",
     "flavour_html": "If you wish to rush into strange places, be prepared to face strange things.",
     "is_disabled": false,
-    "weight": 841,
+    "weight": 854,
     "from_boss": false
   },
   {
@@ -3802,7 +3802,7 @@
     "art_src": "The_Return_of_the_Rat.png",
     "flavour_html": "And he shall be heralded by the screams of the damned.",
     "is_disabled": false,
-    "weight": 942,
+    "weight": 924,
     "from_boss": false
   },
   {
@@ -3813,7 +3813,7 @@
     "art_src": "The_Risk.png",
     "flavour_html": "\"There is no right or wrong choice, no best or worst. There are only choices and their consequences.\"",
     "is_disabled": false,
-    "weight": 4874,
+    "weight": 4766,
     "from_boss": false
   },
   {
@@ -3824,7 +3824,7 @@
     "art_src": "The_Rite_of_Elements.png",
     "flavour_html": "A mind as quick as lightning, <br>fists as hard as stone, <br>a heart that burns with fury, <br>and eyes that chill to the bone.",
     "is_disabled": false,
-    "weight": 2202,
+    "weight": 2171,
     "from_boss": false
   },
   {
@@ -3835,7 +3835,7 @@
     "art_src": "The_Road_to_Power.png",
     "flavour_html": "A beacon on the horizon; a guiding light, a call for help, or a warning to turn back.",
     "is_disabled": false,
-    "weight": 209,
+    "weight": 210,
     "from_boss": false
   },
   {
@@ -3846,7 +3846,7 @@
     "art_src": "The_Rusted_Bard.png",
     "flavour_html": "Fourfold the refrain, fortissimo cheer.<br>One hundred rent twain, naught left for a bier.<br>The song rattles on, though hollow a bit.<br>See the hope is gone, no prize shall ye get.",
     "is_disabled": false,
-    "weight": 128,
+    "weight": 132,
     "from_boss": false
   },
   {
@@ -3857,7 +3857,7 @@
     "art_src": "The_Ruthless_Ceinture.png",
     "flavour_html": "In combat, a warrior must first be resourceful,<br>and second, decisive.",
     "is_disabled": false,
-    "weight": 2766,
+    "weight": 2744,
     "from_boss": false
   },
   {
@@ -3879,7 +3879,7 @@
     "art_src": "The_Saints_Treasure.png",
     "flavour_html": "Publicly, he lived a pious and chaste life of poverty. Privately, tithes and tributes made him and his lascivious company very comfortable indeed.",
     "is_disabled": false,
-    "weight": 11019,
+    "weight": 11000,
     "from_boss": false
   },
   {
@@ -3901,7 +3901,7 @@
     "art_src": "The_Scarred_Meadow.png",
     "flavour_html": "The earth offers nourishment, growth and healing. Unless, of course, the sky has other plans.",
     "is_disabled": false,
-    "weight": 18610,
+    "weight": 18470,
     "from_boss": false
   },
   {
@@ -3912,7 +3912,7 @@
     "art_src": "The_Scavenger.png",
     "flavour_html": "Take small pieces of things and then assemble them together",
     "is_disabled": false,
-    "weight": 2352,
+    "weight": 2337,
     "from_boss": false
   },
   {
@@ -3923,7 +3923,7 @@
     "art_src": "The_Scholar.png",
     "flavour_html": "It is with the smallest of words that we find the largest of truths.",
     "is_disabled": false,
-    "weight": 47100,
+    "weight": 46757,
     "from_boss": false
   },
   {
@@ -3934,7 +3934,7 @@
     "art_src": "The_Scout.png",
     "flavour_html": "The first to travel are often rewarded for their journey, but all the treasure in the world cannot bring back those that are lost.",
     "is_disabled": false,
-    "weight": 2439,
+    "weight": 2416,
     "from_boss": false
   },
   {
@@ -3945,7 +3945,7 @@
     "art_src": "The_Seeker.png",
     "flavour_html": "All that is flawed is worthless. The slightest error, and this might as well be trash.",
     "is_disabled": false,
-    "weight": 678,
+    "weight": 657,
     "from_boss": false
   },
   {
@@ -3956,7 +3956,7 @@
     "art_src": "The_Sephirot.png",
     "flavour_html": "If the path to divinity were simple, we'd all be gods.",
     "is_disabled": false,
-    "weight": 250,
+    "weight": 246,
     "from_boss": false
   },
   {
@@ -3967,7 +3967,7 @@
     "art_src": "The_Shepherds_Sandals.png",
     "flavour_html": "He who watches the flock is himself watched by those with loyalty beyond measure.",
     "is_disabled": false,
-    "weight": 200,
+    "weight": 201,
     "from_boss": false
   },
   {
@@ -3978,7 +3978,7 @@
     "art_src": "The_Shieldbearer.png",
     "flavour_html": "While you grow, I shall be your knight, and you my squire. One day, you shall be the one who stands and defends our home.",
     "is_disabled": false,
-    "weight": 11,
+    "weight": 10,
     "from_boss": false
   },
   {
@@ -3989,7 +3989,7 @@
     "art_src": "The_Shortcut.png",
     "flavour_html": "If time is the most valuable currency, how do you make more of it?",
     "is_disabled": false,
-    "weight": 112,
+    "weight": 117,
     "from_boss": false
   },
   {
@@ -4011,7 +4011,7 @@
     "art_src": "The_Sigil.png",
     "flavour_html": "Three men travel<br>through the gate;<br>they carry a protective ward.<br>A faction conspires<br>against their fate,<br>but magic unravels the sword.",
     "is_disabled": false,
-    "weight": 7544,
+    "weight": 7514,
     "from_boss": false
   },
   {
@@ -4022,7 +4022,7 @@
     "art_src": "The_Siren.png",
     "flavour_html": "At the beck and call<br>of The Siren's hand,<br>winter ravages<br>the trembling land,<br>and the weight of ice that binds<br>will break the strongest of minds.",
     "is_disabled": false,
-    "weight": 571,
+    "weight": 567,
     "from_boss": false
   },
   {
@@ -4033,7 +4033,7 @@
     "art_src": "The_Skeleton.png",
     "flavour_html": "They stand among us, and within us.",
     "is_disabled": false,
-    "weight": 5408,
+    "weight": 5384,
     "from_boss": false
   },
   {
@@ -4044,7 +4044,7 @@
     "art_src": "The_Slumbering_Beast.png",
     "flavour_html": "He slumbers...<br>But soon he will awaken.",
     "is_disabled": false,
-    "weight": 1,
+    "weight": 2,
     "from_boss": false
   },
   {
@@ -4055,7 +4055,7 @@
     "art_src": "The_Soul.png",
     "flavour_html": "\"Most people only have one. I'm a bit of a hoarder.\"",
     "is_disabled": false,
-    "weight": 15,
+    "weight": 14,
     "from_boss": false
   },
   {
@@ -4066,7 +4066,7 @@
     "art_src": "The_Spark_and_the_Flame.png",
     "flavour_html": "When sky meets ground the flames can be found, but who has the will to tame them.",
     "is_disabled": false,
-    "weight": 568,
+    "weight": 555,
     "from_boss": false
   },
   {
@@ -4077,7 +4077,7 @@
     "art_src": "The_Spoiled_Prince.png",
     "flavour_html": "A boy who grows up with everything learns to appreciate nothing.",
     "is_disabled": false,
-    "weight": 907,
+    "weight": 889,
     "from_boss": false
   },
   {
@@ -4088,7 +4088,7 @@
     "art_src": "The_Standoff.png",
     "flavour_html": "Sometimes your greatest enemy is the only one keeping you breathing.",
     "is_disabled": false,
-    "weight": 6297,
+    "weight": 6275,
     "from_boss": false
   },
   {
@@ -4099,7 +4099,7 @@
     "art_src": "The_Stormcaller.png",
     "flavour_html": "If you beckon the<br>Lord of Lightning,<br>do not be surprised<br>when you are struck.",
     "is_disabled": false,
-    "weight": 6312,
+    "weight": 6268,
     "from_boss": false
   },
   {
@@ -4110,7 +4110,7 @@
     "art_src": "The_Strategist.png",
     "flavour_html": "Know thine enemy better than you know thyself.",
     "is_disabled": false,
-    "weight": 38,
+    "weight": 35,
     "from_boss": false
   },
   {
@@ -4121,7 +4121,7 @@
     "art_src": "The_Summoner.png",
     "flavour_html": "To own a piece of the Nightmare, you must first belong to the Nightmare.",
     "is_disabled": false,
-    "weight": 6413,
+    "weight": 6344,
     "from_boss": false
   },
   {
@@ -4132,7 +4132,7 @@
     "art_src": "The_Sun.png",
     "flavour_html": "Each night, the light dies, and each morning she is born anew, embracing the land in her golden wings.",
     "is_disabled": false,
-    "weight": 10735,
+    "weight": 10674,
     "from_boss": false
   },
   {
@@ -4143,7 +4143,7 @@
     "art_src": "The_Surgeon.png",
     "flavour_html": "\"He might be lacking in vision, but his virtuosity is undeniable.\"<br>- Malachai, on Maligaro",
     "is_disabled": false,
-    "weight": 5012,
+    "weight": 5014,
     "from_boss": false
   },
   {
@@ -4154,7 +4154,7 @@
     "art_src": "The_Surveyor.png",
     "flavour_html": "Exploring lands made of flesh and sorrow, we'll reap and plunder like there's no tomorrow.",
     "is_disabled": false,
-    "weight": 4290,
+    "weight": 4239,
     "from_boss": false
   },
   {
@@ -4165,7 +4165,7 @@
     "art_src": "The_Survivalist.png",
     "flavour_html": "A lucky number <br>For us all <br>To help us through <br>The perils told.",
     "is_disabled": false,
-    "weight": 7636,
+    "weight": 7606,
     "from_boss": false
   },
   {
@@ -4176,7 +4176,7 @@
     "art_src": "The_Sword_Kings_Salute.png",
     "flavour_html": "Many were slain by the sword king <br>Their blood decorating his ring <br>Those who retreated were slaughtered <br>Those who fought bravely were honoured",
     "is_disabled": false,
-    "weight": 14189,
+    "weight": 14089,
     "from_boss": false
   },
   {
@@ -4187,7 +4187,7 @@
     "art_src": "The_Thaumaturgist.png",
     "flavour_html": "\"Mastery of thaumaturgy is like any other pursuit; it requires dedication and sacrifice. Sometimes several sacrifices.\"<br>- Shavronne of Umbra",
     "is_disabled": false,
-    "weight": 117,
+    "weight": 118,
     "from_boss": false
   },
   {
@@ -4198,7 +4198,7 @@
     "art_src": "The_Throne.png",
     "flavour_html": "A king's movement is unwavering.",
     "is_disabled": false,
-    "weight": 155,
+    "weight": 156,
     "from_boss": false
   },
   {
@@ -4209,7 +4209,7 @@
     "art_src": "The_Tinkerers_Table.png",
     "flavour_html": "Trying to bring your vision to life is enough to drive you mad.",
     "is_disabled": false,
-    "weight": 208,
+    "weight": 215,
     "from_boss": false
   },
   {
@@ -4220,7 +4220,7 @@
     "art_src": "The_Tireless_Extractor.png",
     "flavour_html": "\"I am not alone in this. I have God by my side! And... you help sometimes, I suppose.\"<br>- Sister Cassia",
     "is_disabled": false,
-    "weight": 9808,
+    "weight": 9810,
     "from_boss": false
   },
   {
@@ -4231,7 +4231,7 @@
     "art_src": "The_Tower.png",
     "flavour_html": "A tower built of the strongest stone is not eternal; a towering intellect is not enlightened.",
     "is_disabled": false,
-    "weight": 6922,
+    "weight": 6879,
     "from_boss": false
   },
   {
@@ -4242,7 +4242,7 @@
     "art_src": "The_Traitor.png",
     "flavour_html": "Sometimes an apprentice becomes a master through countless hours of hard work and practice.<br>Sometimes it happens by force.",
     "is_disabled": false,
-    "weight": 1191,
+    "weight": 1179,
     "from_boss": false
   },
   {
@@ -4253,7 +4253,7 @@
     "art_src": "The_Transformation.png",
     "flavour_html": "Even the most beautiful of transformations can still have a dark side.",
     "is_disabled": false,
-    "weight": 249,
+    "weight": 247,
     "from_boss": false
   },
   {
@@ -4264,7 +4264,7 @@
     "art_src": "The_Trial.png",
     "flavour_html": "You cannot journey to new lands until you have the courage to leave the safety of home.",
     "is_disabled": false,
-    "weight": 6214,
+    "weight": 6189,
     "from_boss": false
   },
   {
@@ -4275,7 +4275,7 @@
     "art_src": "The_Tumbleweed.png",
     "flavour_html": "Love is the only redemption after succumbing to the grasps of the Wasteland.",
     "is_disabled": false,
-    "weight": 24,
+    "weight": 28,
     "from_boss": false
   },
   {
@@ -4286,7 +4286,7 @@
     "art_src": "The_Twilight_Moon.png",
     "flavour_html": "The day is dying, the night is born, the air grows cool, the sky is torn.",
     "is_disabled": false,
-    "weight": 390,
+    "weight": 380,
     "from_boss": false
   },
   {
@@ -4297,7 +4297,7 @@
     "art_src": "The_Twins.png",
     "flavour_html": "Two sides of a coin;<br>Heads for a friend,<br>tails a foe;<br>Gemini toss up",
     "is_disabled": false,
-    "weight": 5028,
+    "weight": 5000,
     "from_boss": false
   },
   {
@@ -4319,7 +4319,7 @@
     "art_src": "The_Undaunted.png",
     "flavour_html": "\"Fate was always my nemesis... <br>But it didn't stop me then, and it won't stop me now.\"<br>- Kjetilbrann, The Undaunted",
     "is_disabled": false,
-    "weight": 898,
+    "weight": 877,
     "from_boss": false
   },
   {
@@ -4341,7 +4341,7 @@
     "art_src": "The_Unexpected_Prize.png",
     "flavour_html": "They came from far and wide under a common banner.<br>They sought companionship and competition,<br>but found a treasure none had foreseen.",
     "is_disabled": false,
-    "weight": 353,
+    "weight": 358,
     "from_boss": false
   },
   {
@@ -4352,7 +4352,7 @@
     "art_src": "The_Union.png",
     "flavour_html": "On the 21st of Eterni, <br>two become one, <br>their light outshines <br>the setting sun.",
     "is_disabled": false,
-    "weight": 1340,
+    "weight": 1339,
     "from_boss": false
   },
   {
@@ -4363,7 +4363,7 @@
     "art_src": "The_Valkyrie.png",
     "flavour_html": "The villain strikes,<br>the world is torn.<br>A war begins, a hero is born,<br>The nemesis sets the sky alight.<br>A hero's sacrifice<br>sets everything right.<br>- Drake's Epitaph",
     "is_disabled": false,
-    "weight": 3523,
+    "weight": 3461,
     "from_boss": false
   },
   {
@@ -4385,7 +4385,7 @@
     "art_src": "The_Visionary.png",
     "flavour_html": "Lioneye looked to the heights of glorious victory. And thus he missed the defeat right under his nose.",
     "is_disabled": false,
-    "weight": 9124,
+    "weight": 9097,
     "from_boss": false
   },
   {
@@ -4407,7 +4407,7 @@
     "art_src": "The_Warden.png",
     "flavour_html": "Brutus' first innovation as Lord Incarcerator was a weighted chain around every neck so that his prisoners would forever bow to him.",
     "is_disabled": false,
-    "weight": 9366,
+    "weight": 9298,
     "from_boss": false
   },
   {
@@ -4418,7 +4418,7 @@
     "art_src": "The_Warlord.png",
     "flavour_html": "To cure the Goddess,<br>and break the chains of corruption,<br>you must shatter the world.",
     "is_disabled": false,
-    "weight": 558,
+    "weight": 584,
     "from_boss": false
   },
   {
@@ -4429,7 +4429,7 @@
     "art_src": "The_Watcher.png",
     "flavour_html": "Strange eyes on top of spines <br>Gaze beyond the veil of time <br>Deep down below the mines <br>A dream of crimson and of grime",
     "is_disabled": false,
-    "weight": 3330,
+    "weight": 3343,
     "from_boss": false
   },
   {
@@ -4440,7 +4440,7 @@
     "art_src": "The_Web.png",
     "flavour_html": "A weapon, a shelter, a prison.<br>The web's purpose changes<br>with the spider's needs.<br>A lesson we should<br>take to heart.",
     "is_disabled": false,
-    "weight": 7676,
+    "weight": 7595,
     "from_boss": false
   },
   {
@@ -4451,7 +4451,7 @@
     "art_src": "The_Wedding_Gift.png",
     "flavour_html": "The acolytes congratulated the lucky groom for becoming one with the goddess.",
     "is_disabled": false,
-    "weight": 57,
+    "weight": 58,
     "from_boss": false
   },
   {
@@ -4462,7 +4462,7 @@
     "art_src": "The_White_Knight.png",
     "flavour_html": "Where Decay festers, I shall expunge it, and leave in its place a shining monument.",
     "is_disabled": false,
-    "weight": 25,
+    "weight": 26,
     "from_boss": false
   },
   {
@@ -4473,7 +4473,7 @@
     "art_src": "The_Whiteout.png",
     "flavour_html": "They thought winter had come early,<br>that snow blanketed the land,<br>but in truth, all their chickens<br>had come home to roost.",
     "is_disabled": false,
-    "weight": 390,
+    "weight": 401,
     "from_boss": false
   },
   {
@@ -4484,7 +4484,7 @@
     "art_src": "The_Wilted_Rose.png",
     "flavour_html": "Though the path to divinity is fraught with peril, hope may bloom from within.",
     "is_disabled": false,
-    "weight": 2335,
+    "weight": 2322,
     "from_boss": false
   },
   {
@@ -4495,7 +4495,7 @@
     "art_src": "The_Wind.png",
     "flavour_html": "Weaving through the cracks, searching for weaknesses, silent, indiscriminate, leaving sorrow in its wake.",
     "is_disabled": false,
-    "weight": 361,
+    "weight": 360,
     "from_boss": false
   },
   {
@@ -4506,7 +4506,7 @@
     "art_src": "The_Witch.png",
     "flavour_html": "A wanderer in the wild strives <br>Against countless foes he survives <br>A fool pursues a quest contrived <br>By the gift of the witch, alive.",
     "is_disabled": false,
-    "weight": 15706,
+    "weight": 15664,
     "from_boss": false
   },
   {
@@ -4517,7 +4517,7 @@
     "art_src": "The_Wolf.png",
     "flavour_html": "The largest beasts cannot be overpowered. The Greatwolf teaches us to use guile, not strength, to probe for the soft flesh and strike deep.",
     "is_disabled": false,
-    "weight": 4898,
+    "weight": 4841,
     "from_boss": false
   },
   {
@@ -4528,7 +4528,7 @@
     "art_src": "The_Wolfs_Legacy.png",
     "flavour_html": "The howls and cackling could not mask the sadness.",
     "is_disabled": false,
-    "weight": 297,
+    "weight": 293,
     "from_boss": false
   },
   {
@@ -4539,7 +4539,7 @@
     "art_src": "The_Wolfs_Shadow.png",
     "flavour_html": "\"If I fall, we will fall together with my fangs in your throat.\"",
     "is_disabled": false,
-    "weight": 4472,
+    "weight": 4582,
     "from_boss": false
   },
   {
@@ -4550,7 +4550,7 @@
     "art_src": "The_Wolven_Kings_Bite.png",
     "flavour_html": "A wolf does not bite his mate as he does his prey, yet both begin with bared teeth. Know who you are, and you will know the meaning of the bite.",
     "is_disabled": false,
-    "weight": 475,
+    "weight": 480,
     "from_boss": false
   },
   {
@@ -4561,7 +4561,7 @@
     "art_src": "The_Wolverine.png",
     "flavour_html": "Claw them from the bottom, you'll be glad that you have got 'em, claw them from the top, you'll never want to stop.",
     "is_disabled": false,
-    "weight": 1168,
+    "weight": 1150,
     "from_boss": false
   },
   {
@@ -4583,7 +4583,7 @@
     "art_src": "The_Wrath.png",
     "flavour_html": "\"Daughter of catastrophe, mother of pain. Amongst the filth of Wraeclast, she wanders, and her wrath follows.\" - Quintoon the Returned",
     "is_disabled": false,
-    "weight": 8200,
+    "weight": 8284,
     "from_boss": false
   },
   {
@@ -4594,7 +4594,7 @@
     "art_src": "The_Wretched.png",
     "flavour_html": "Necromancers, believe me, are more terrifying than their thralls.",
     "is_disabled": false,
-    "weight": 4344,
+    "weight": 4326,
     "from_boss": false
   },
   {
@@ -4605,7 +4605,7 @@
     "art_src": "Thirst_for_Knowledge.png",
     "flavour_html": "A ravenous mind can readily take in ideas from any source. <br>Fortunately for the scholars, he has already learned about sustainability.",
     "is_disabled": false,
-    "weight": 7915,
+    "weight": 7840,
     "from_boss": false
   },
   {
@@ -4616,7 +4616,7 @@
     "art_src": "Three_Faces_in_the_Dark.png",
     "flavour_html": "For every threat you spy in the shadows, there are two others you don't.",
     "is_disabled": false,
-    "weight": 23969,
+    "weight": 24086,
     "from_boss": false
   },
   {
@@ -4627,7 +4627,7 @@
     "art_src": "Three_Voices.png",
     "flavour_html": "The village elders had a curious rule: If you hear three voices scream for aid, flee as fast as you can.",
     "is_disabled": false,
-    "weight": 11729,
+    "weight": 11764,
     "from_boss": false
   },
   {
@@ -4638,7 +4638,7 @@
     "art_src": "Thunderous_Skies.png",
     "flavour_html": "Many that have wielded the power of lightning have said that death by electrocution looks like the victim is more alive than ever before.",
     "is_disabled": false,
-    "weight": 10314,
+    "weight": 10165,
     "from_boss": false
   },
   {
@@ -4649,7 +4649,7 @@
     "art_src": "Time-Lost_Relic.png",
     "flavour_html": "Time cannot wash away that which cannot be forgotten.",
     "is_disabled": false,
-    "weight": 6506,
+    "weight": 6487,
     "from_boss": false
   },
   {
@@ -4660,7 +4660,7 @@
     "art_src": "Toxic_Tidings.png",
     "flavour_html": "A beast even Einhar<br>will not hunt.",
     "is_disabled": false,
-    "weight": 157,
+    "weight": 167,
     "from_boss": false
   },
   {
@@ -4671,7 +4671,7 @@
     "art_src": "Tranquillity.png",
     "flavour_html": "Beware the sudden calm, for it is a sure sign of a storm on the horizon.",
     "is_disabled": false,
-    "weight": 12,
+    "weight": 11,
     "from_boss": false
   },
   {
@@ -4682,7 +4682,7 @@
     "art_src": "Treasure_Hunter.png",
     "flavour_html": "\"Don't worry, I know what I'm doing.\"<br>- Toggo's Last Words",
     "is_disabled": false,
-    "weight": 113,
+    "weight": 108,
     "from_boss": false
   },
   {
@@ -4693,7 +4693,7 @@
     "art_src": "Triskaidekaphobia.png",
     "flavour_html": "The Mists of Madness prey on those who harbour the deepest of fears.",
     "is_disabled": false,
-    "weight": 1122,
+    "weight": 1127,
     "from_boss": false
   },
   {
@@ -4704,7 +4704,7 @@
     "art_src": "Turn_the_Other_Cheek.png",
     "flavour_html": "\"Only after one forsakes rage, can true power be found.\"<br>- Sekhema Asenath",
     "is_disabled": false,
-    "weight": 537,
+    "weight": 522,
     "from_boss": false
   },
   {
@@ -4715,7 +4715,7 @@
     "art_src": "Unchained.png",
     "flavour_html": "Mold the world with your bare hands. Be careful, for what is your doing might become your undoing.",
     "is_disabled": false,
-    "weight": 369,
+    "weight": 380,
     "from_boss": false
   },
   {
@@ -4726,7 +4726,7 @@
     "art_src": "Underground_Forest.png",
     "flavour_html": "\"In the forest again... But at least I have these.\"",
     "is_disabled": false,
-    "weight": 192,
+    "weight": 186,
     "from_boss": false
   },
   {
@@ -4737,7 +4737,7 @@
     "art_src": "Unrequited_Love.png",
     "flavour_html": "The pale flame of his heart disappeared in his azure reflection.<br>The work of a life.<br>Ambitious, and unfinished.",
     "is_disabled": false,
-    "weight": 3,
+    "weight": 2,
     "from_boss": false
   },
   {
@@ -4748,7 +4748,7 @@
     "art_src": "Vanity.png",
     "flavour_html": "",
     "is_disabled": false,
-    "weight": 707,
+    "weight": 678,
     "from_boss": false
   },
   {
@@ -4759,7 +4759,7 @@
     "art_src": "Vile_Power.png",
     "flavour_html": "Dread and danger <br>makes the air feel thin. <br>Above, power slumbers, tempting fate. <br>Greed and ambition <br>draws countless in, <br>For those who seek power <br>can never wait.",
     "is_disabled": false,
-    "weight": 1402,
+    "weight": 1405,
     "from_boss": false
   },
   {
@@ -4770,7 +4770,7 @@
     "art_src": "Vinias_Token.png",
     "flavour_html": "You can change your name, but you cannot change your history.",
     "is_disabled": false,
-    "weight": 4656,
+    "weight": 4688,
     "from_boss": false
   },
   {
@@ -4792,7 +4792,7 @@
     "art_src": "Volatile_Power.png",
     "flavour_html": "Unlimited power is apt to corrupt the minds of those who possess it.",
     "is_disabled": false,
-    "weight": 6105,
+    "weight": 6043,
     "from_boss": false
   },
   {
@@ -4803,7 +4803,7 @@
     "art_src": "Wealth_and_Power.png",
     "flavour_html": "The greatness of a man is not in how much wealth or power he acquires, but in his integrity and his ability to positively affect those around him.",
     "is_disabled": false,
-    "weight": 39,
+    "weight": 37,
     "from_boss": false
   },
   {
